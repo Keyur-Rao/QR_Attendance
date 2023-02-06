@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/var/www/html/tnr-qr-attendance/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
+            "outputFile": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
             "map": [
                 {
                     "source": "/home/rao/.gradle/caches/transforms-2/files-2.1/b30aa8f2c38872540ef1352302c9199c/jetified-play-services-basement-17.6.0/res/values-hu/values.xml",

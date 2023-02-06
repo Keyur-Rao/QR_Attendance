@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/var/www/html/tnr-qr-attendance/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
                     "source": "/home/rao/.gradle/caches/transforms-2/files-2.1/93e99cc524f9e4f775937ead40ad032e/appcompat-1.2.0/res/values-watch-v20/values-watch-v20.xml",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/rao/.gradle/caches/transforms-2/files-2.1/341ddf40593a9d9975d4cb561be40a55/jetified-play-services-auth-16.0.1/res/values-watch-v20/values.xml",
+                    "source": "/home/rao/.gradle/caches/transforms-2/files-2.1/949ada137786edb12aa73a2a72d48698/jetified-play-services-auth-16.0.1/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

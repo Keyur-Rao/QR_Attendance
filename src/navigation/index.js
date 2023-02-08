@@ -7,6 +7,7 @@ import Attendance_fill_data from '../screens/Attendance_fill_data'
 import Final_Attendance from '../screens/Final_Attendance'
 import Show_Barcode_Attendance from '../screens/Show_Barcode_Attendance'
 import Login from '../screens/Login'
+import Generate_QR_Code from '../screens/Generate_QR_Code'
 import { useState, useEffect } from 'react';
 import { AsyncStorage } from 'react-native';
 import { Text, View, Image, StyleSheet } from 'react-native';
@@ -59,6 +60,7 @@ const MainApp = createStackNavigator({
               ),
         }
     },
+
     Start_Attendance: {
         screen: Start_Attendance,
         navigationOptions: {
@@ -73,8 +75,6 @@ const MainApp = createStackNavigator({
         }
     },
 
-    
-
     Final_Attendance: {
         screen: Final_Attendance,
         navigationOptions: {
@@ -83,6 +83,7 @@ const MainApp = createStackNavigator({
             
         }
     },
+
     Show_Barcode_Attendance: {
         screen: Show_Barcode_Attendance,
         navigationOptions: {
@@ -96,6 +97,14 @@ const MainApp = createStackNavigator({
           ),
         }
     },
+
+    Generate_QR_Code:{
+        screen: Generate_QR_Code,
+        navigationOptions: {
+            headerShown: false,
+        }
+    },
+ 
 })
 
 const AppContainer = createAppContainer(MainApp)

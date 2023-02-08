@@ -33,6 +33,8 @@ import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import fr.bamlab.rnimageresizer.ImageResizerPackage;
 // react-native-safe-area-context
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
+// react-native-svg
+import com.horcrux.svg.SvgPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
 
@@ -91,6 +93,7 @@ public class PackageList {
       new PickerPackage(),
       new ImageResizerPackage(),
       new SafeAreaContextPackage(),
+      new SvgPackage(),
       new VectorIconsPackage()
     ));
   }

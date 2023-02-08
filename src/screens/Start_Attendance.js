@@ -14,7 +14,7 @@ function Start_Attendance({ navigation }) {
     <RNCamera
     ref={ref => {
             this.camera = ref;
-          }}
+        }}
       captureAudio={false}
       style={{flex: 1}}
       type={RNCamera.Constants.Type.back}

@@ -1,13 +1,12 @@
 
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { useEffect } from 'react';
 import axios from 'axios';
-
 import GoogleSheet, { batchGet } from 'react-native-google-sheet';
-
+import QRCode from 'react-native-qrcode-svg';
 import { AsyncStorage } from 'react-native';
 
 const facultyData = [
@@ -82,6 +81,7 @@ const unitData = [
     { label: 'Lab', value: 'Lab' },
 ];
 
+
 function Attendance_fill_data({ navigation }) {
 
     const [value, setValue] = useState(null);
@@ -101,24 +101,27 @@ function Attendance_fill_data({ navigation }) {
     const [couse_sub, setCourseSub] = useState([])
     const [filter_sub, setFilterSub] = useState([])
     const [token, setToken] = useState(null);
+    const [qrValue, setQrValue] = useState("Teacher QR");
+    const [qrDisplay, setQrDisplay] = useState('none');
+    const [formDisplay, setFormDisplay] = useState('flex');
+    const [btnsDisplay, setBtnsDisplay] = useState('flex');
 
 
     let temp1 = []
-    let tokenToPass = ''
     useEffect(() => {
         getToken();
         console.log("getStudentsName");
 
     }, []);
-
-
-       
-    
-      const getToken = async () => {
-          const value = await AsyncStorage.getItem('token');
-          console.log("value", value)
-          getAllData(value)
-      };
+ 
+    const getToken = async () => {
+        const value = await AsyncStorage.getItem('token');
+        if (value) {
+            setToken(value);
+        }
+        console.log("value", value);
+        getAllData(value);
+    };
 
 
     const getAllData = async (gtoken) => {
@@ -131,7 +134,6 @@ function Attendance_fill_data({ navigation }) {
         let course_data = []
         let temp_data = []
         let course_sub_data = []
-        tokenToPass = gtoken
         try {
             // var result = await axios.get('https://sheet.best/api/sheets/1bba0f70-e195-45e7-bfaa-48948ef1c41b')
             // console.log("result  ", result.data);
@@ -145,15 +147,15 @@ function Attendance_fill_data({ navigation }) {
             // })
 
             const requestOptions = {
-                'headers': { 'Authorization': gtoken }
+                'headers': { 'Authorization': token }
                 // 'headers': { 'Authorization': 'ya29.a0ARrdaM9DRfJAKZX8Utp16wgaUq-VD7r78KsHdHUYsBrNU_oog3Eu81JsDKG-1QuOOTo-gsDSS7f7g58Rje4lbXoY_Vrvz5TMU1yLuypq5KBpNqTNBLYQ1YDx-juTqwkmCaTFTh1aTqlMHJy5-w3S0AqzNri7' }     
 
             }
-            console.log("gTOKEN============", gtoken)
+            // console.log("gTOKEN============", gtoken)
             // var result = await axios.get('https://sheets.googleapis.com/v4/spreadsheets/10mgjKImWlbZWbUxi4SemgqE3DpK4pX_xctFuOSLDd2A/values/A2:E35?key=AIzaSyDG7XnQdQo-HR7hEhkvuX3gW4P4nnXvP2M',requestOptions)
             var result = await axios.get('https://sheets.googleapis.com/v4/spreadsheets/10mgjKImWlbZWbUxi4SemgqE3DpK4pX_xctFuOSLDd2A/values/A2:F200?key=AIzaSyD8s8tc4t1vO6QDiqS-Ji9sFmAhucflnGU', requestOptions)
-            console.log("result**********8*********************************************88", result);
-            console.log("requestOptions::::::", requestOptions);
+            // console.log("result**********8*********************************************88", result);
+            // console.log("requestOptions::::::", requestOptions);
             // fetch("https://sheets.googleapis.com/v4/spreadsheets/1M8ywh57PmN1lfQkbRuPpv9Zhr6EAiDg9a_Lrr3_9BDc/values/A2:E10?key=AIzaSyDG7XnQdQo-HR7hEhkvuX3gW4P4nnXvP2M", requestOptions)
             // .then((r) => r.json())
             // .then((data) => {
@@ -165,7 +167,7 @@ function Attendance_fill_data({ navigation }) {
             //     console.log(error);
             // });
 
-            console.log("result !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  ", result.data.values);
+            // console.log("result !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  ", result.data.values);
             result.data.values.forEach(element => {
                 console.log("!!!!!!!!!!element!!!!!", element[0]);
                 fac_names_data.push({ "label": element[0], "value": element[0] })
@@ -222,252 +224,29 @@ function Attendance_fill_data({ navigation }) {
         })
         setFilterSub(temp1)
     }
-    return (
-        <View style={styles.container}>
-            {renderLabel()}
 
+    
+    
+    const generate_qr = () =>{
+        let dateTime = new Date();
 
-            { }
+        let dataObj = {
+            faculty_Name: value6,
+            sam_Name: value2,
+            div_Name : value3,
+            subject_Name : value4,
+            unit_Name : value5,
+            course_Name : value,
+            timeStamp: dateTime.toLocaleString()
+        }
+        console.log(dataObj);
+        let dataString = JSON.stringify(dataObj);
+        setQrValue(dataString);
+        setFormDisplay('none');
+        setQrDisplay('flex');
+        setBtnsDisplay('none');
+    }
 
-            <View style={{ margin: 10 }}>
-                <Dropdown
-                    style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
-                    placeholderStyle={styles.placeholderStyle}
-                    selectedTextStyle={styles.selectedTextStyle}
-                    inputSearchStyle={styles.inputSearchStyle}
-                    iconStyle={styles.iconStyle}
-                    data={course}
-                    search
-                    maxHeight={300}
-                    labelField="label"
-                    valueField="value"
-                    placeholder={!isFocus ? 'Select Course Name' : '...'}
-                    searchPlaceholder="Search..."
-                    value={value}
-                    onFocus={() => setIsFocus(true)}
-                    onBlur={() => setIsFocus(false)}
-                    onChange={item => {
-                        setValue(item.value);
-                        setIsFocus(false);
-                        setDropDownData(item.value)
-                    }}
-                    renderLeftIcon={() => (
-                        <AntDesign
-                            style={styles.icon}
-                            color={isFocus ? 'blue' : 'black'}
-                            name="Safety"
-                            size={20}
-                        />
-                    )}
-                />
-            </View>
-
-
-
-            <View style={{ margin: 10 }}>
-                <Dropdown
-                    style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
-                    placeholderStyle={styles.placeholderStyle}
-                    selectedTextStyle={styles.selectedTextStyle}
-                    inputSearchStyle={styles.inputSearchStyle}
-                    iconStyle={styles.iconStyle}
-                    data={faculityName}
-                    search
-                    maxHeight={300}
-                    labelField="label"
-                    valueField="value"
-                    placeholder={!isFocus ? 'Select Faculty Name' : '...'}
-                    searchPlaceholder="Search..."
-                    value={value}
-                    onFocus={() => setIsFocus(true)}
-                    onBlur={() => setIsFocus(false)}
-                    onChange={item => {
-                        setValue6(item.value);
-                        setIsFocus(false);
-                    }}
-                    renderLeftIcon={() => (
-                        <AntDesign
-                            style={styles.icon}
-                            color={isFocus ? 'blue' : 'black'}
-                            name="Safety"
-                            size={20}
-                        />
-                    )}
-                />
-            </View>
-
-            
-            {/* {
-
-                couse_sub.forEach(element => {
-                    // console.log("&&&&&&&&&&&&&&&&&&&",element.course);
-                    if (element.course == value) {
-                        console.log("&&&&&&&&&&&&&&&&&&&", element.subject);
-                        let a = { "label": element.subject, "value": element.subject }
-                        // setFilterSub(filter_sub => [...filter_sub, a])
-                        // setFilterSub([...filter_sub, { "label": element.subject, "value": element.subject }]);
-                    }
-                })
-                { setFilterSub(filter_sub.concat(a))         }
-                
-             }  */}
-
-
-
-            {/* {
-              
-                //
-                () => setDropDownData(couse_sub,value) 
-            } */}
-
-
-            <View style={{ margin: 10 }}>
-                <Dropdown
-                    style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
-                    placeholderStyle={styles.placeholderStyle}
-                    selectedTextStyle={styles.selectedTextStyle}
-                    inputSearchStyle={styles.inputSearchStyle}
-                    iconStyle={styles.iconStyle}
-                    data={sem}
-                    search
-                    maxHeight={300}
-                    labelField="label"
-                    valueField="value"
-                    placeholder={!isFocus ? 'Select semester' : '...'}
-                    searchPlaceholder="Search..."
-                    value={value}
-                    onFocus={() => setIsFocus(true)}
-                    onBlur={() => setIsFocus(false)}
-                    onChange={item => {
-                        
-                        setValue2(item.value);
-                        setIsFocus(false);
-
-                    }}
-                    renderLeftIcon={() => (
-                        <AntDesign
-                            style={styles.icon}
-                            color={isFocus ? 'blue' : 'black'}
-                            name="Safety"
-                            size={20}
-                        />
-                    )}
-                />
-            </View>
-            <View style={{ margin: 10 }}>
-                <Dropdown
-                    style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
-                    placeholderStyle={styles.placeholderStyle}
-                    selectedTextStyle={styles.selectedTextStyle}
-                    inputSearchStyle={styles.inputSearchStyle}
-                    iconStyle={styles.iconStyle}
-                    data={div}
-                    search
-                    maxHeight={300}
-                    labelField="label"
-                    valueField="value"
-                    placeholder={!isFocus ? 'Select division' : '...'}
-                    searchPlaceholder="Search..."
-                    value={value}
-                    onFocus={() => setIsFocus(true)}
-                    onBlur={() => setIsFocus(false)}
-                    onChange={item => {
-                        setValue3(item.value);
-                        setIsFocus(false);
-                    }}
-                    renderLeftIcon={() => (
-                        <AntDesign
-                            style={styles.icon}
-                            color={isFocus ? 'blue' : 'black'}
-                            name="Safety"
-                            size={20}
-                        />
-                    )}
-                />
-            </View>
-            {/* {console.log("course Name :::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::",value6)}
-            {console.log("couse_sub Name :::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::",couse_sub)} */}
-
-
-            <View style={{ margin: 10 }}>
-                <Dropdown
-                    style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
-                    placeholderStyle={styles.placeholderStyle}
-                    selectedTextStyle={styles.selectedTextStyle}
-                    inputSearchStyle={styles.inputSearchStyle}
-                    iconStyle={styles.iconStyle}
-                    data={filter_sub}
-                    search
-                    maxHeight={300}
-                    labelField="label"
-                    valueField="value"
-                    placeholder={!isFocus ? 'Select Subject Name' : '...'}
-                    searchPlaceholder="Search..."
-                    value={value}
-                    onFocus={() => setIsFocus(true)}
-                    onBlur={() => setIsFocus(false)}
-                    onChange={item => {
-                        setValue4(item.value);
-                        setIsFocus(false);
-                    }}
-                    renderLeftIcon={() => (
-                        <AntDesign
-                            style={styles.icon}
-                            color={isFocus ? 'blue' : 'black'}
-                            name="Safety"
-                            size={20}
-                        />
-                    )}
-                />
-            </View>
-            <View style={{ margin: 10 }}>
-                <Dropdown
-                    style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
-                    placeholderStyle={styles.placeholderStyle}
-                    selectedTextStyle={styles.selectedTextStyle}
-                    inputSearchStyle={styles.inputSearchStyle}
-                    iconStyle={styles.iconStyle}
-                    data={unit}
-                    search
-                    maxHeight={300}
-                    labelField="label"
-                    valueField="value"
-                    placeholder={!isFocus ? 'Select Unit Name' : '...'}
-                    searchPlaceholder="Search..."
-                    value={value}
-                    onFocus={() => setIsFocus(true)}
-                    onBlur={() => setIsFocus(false)}
-                    onChange={item => {
-                        setValue5(item.value);
-                        setIsFocus(false);
-                    }}
-                    renderLeftIcon={() => (
-                        <AntDesign
-                            style={styles.icon}
-                            color={isFocus ? 'blue' : 'black'}
-                            name="Safety"
-                            size={20}
-                        />
-                    )}
-                />
-            </View>
-            <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center', padding: 5 }}>
-                <Button
-                    title="Next"
-                    onPress={() => navigation.navigate('Start_Attendance', { "faculty_Name": value, "sam_Name": value2, "div_Name": value3, "subject_Name": value4, "unit_Name": value5, "course_Name": value6, "token": tokenToPass })}
-                // onPress={() => { console.log("value", value) ; ;console.log("taker name",value2); }}
-                />
-            </View>
-
-        </View>
-
-
-
-    );
-    console.log("value:", value);
-};
-
-export default Attendance_fill_data;
 
 const styles = StyleSheet.create({
     container: {
@@ -508,6 +287,306 @@ const styles = StyleSheet.create({
         height: 40,
         fontSize: 16,
     },
+    qrcode: {
+        display: qrDisplay,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 50
+    },
+    btns: {
+        display: btnsDisplay,
+    },
+    form: {
+        display: formDisplay
+    }
 });
+
+    return (
+        <ScrollView style={styles.container}>
+            {renderLabel()}
+
+            <View style={styles.form} id="form">
+                <View style={{ margin: 10 }}>
+                    <Dropdown
+                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        placeholderStyle={styles.placeholderStyle}
+                        selectedTextStyle={styles.selectedTextStyle}
+                        inputSearchStyle={styles.inputSearchStyle}
+                        iconStyle={styles.iconStyle}
+                        data={course}
+                        search
+                        maxHeight={300}
+                        labelField="label"
+                        valueField="value"
+                        placeholder={!isFocus ? 'Select Course Name' : '...'}
+                        searchPlaceholder="Search..."
+                        value={value}
+                        onFocus={() => setIsFocus(true)}
+                        onBlur={() => setIsFocus(false)}
+                        onChange={item => {
+                            setValue(item.value);
+                            setIsFocus(false);
+                            setDropDownData(item.value)
+                        }}
+                        renderLeftIcon={() => (
+                            <AntDesign
+                                style={styles.icon}
+                                color={isFocus ? 'blue' : 'black'}
+                                name="Safety"
+                                size={20}
+                            />
+                        )}
+                    />
+                </View>
+
+
+
+                <View style={{ margin: 10 }}>
+                    <Dropdown
+                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        placeholderStyle={styles.placeholderStyle}
+                        selectedTextStyle={styles.selectedTextStyle}
+                        inputSearchStyle={styles.inputSearchStyle}
+                        iconStyle={styles.iconStyle}
+                        data={faculityName}
+                        search
+                        maxHeight={300}
+                        labelField="label"
+                        valueField="value"
+                        placeholder={!isFocus ? 'Select Faculty Name' : '...'}
+                        searchPlaceholder="Search..."
+                        value={value}
+                        onFocus={() => setIsFocus(true)}
+                        onBlur={() => setIsFocus(false)}
+                        onChange={item => {
+                            setValue6(item.value);
+                            setIsFocus(false);
+                        }}
+                        renderLeftIcon={() => (
+                            <AntDesign
+                                style={styles.icon}
+                                color={isFocus ? 'blue' : 'black'}
+                                name="Safety"
+                                size={20}
+                            />
+                        )}
+                    />
+                </View>
+
+                
+                {/* {
+
+                    couse_sub.forEach(element => {
+                        // console.log("&&&&&&&&&&&&&&&&&&&",element.course);
+                        if (element.course == value) {
+                            console.log("&&&&&&&&&&&&&&&&&&&", element.subject);
+                            let a = { "label": element.subject, "value": element.subject }
+                            // setFilterSub(filter_sub => [...filter_sub, a])
+                            // setFilterSub([...filter_sub, { "label": element.subject, "value": element.subject }]);
+                        }
+                    })
+                    { setFilterSub(filter_sub.concat(a))         }
+                    
+                }  */}
+
+
+
+                {/* {
+                
+                    //
+                    () => setDropDownData(couse_sub,value) 
+                } */}
+
+
+                <View style={{ margin: 10 }}>
+                    <Dropdown
+                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        placeholderStyle={styles.placeholderStyle}
+                        selectedTextStyle={styles.selectedTextStyle}
+                        inputSearchStyle={styles.inputSearchStyle}
+                        iconStyle={styles.iconStyle}
+                        data={sem}
+                        search
+                        maxHeight={300}
+                        labelField="label"
+                        valueField="value"
+                        placeholder={!isFocus ? 'Select semester' : '...'}
+                        searchPlaceholder="Search..."
+                        value={value}
+                        onFocus={() => setIsFocus(true)}
+                        onBlur={() => setIsFocus(false)}
+                        onChange={item => {
+                            
+                            setValue2(item.value);
+                            setIsFocus(false);
+
+                        }}
+                        renderLeftIcon={() => (
+                            <AntDesign
+                                style={styles.icon}
+                                color={isFocus ? 'blue' : 'black'}
+                                name="Safety"
+                                size={20}
+                            />
+                        )}
+                    />
+                </View>
+
+                <View style={{ margin: 10 }}>
+                    <Dropdown
+                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        placeholderStyle={styles.placeholderStyle}
+                        selectedTextStyle={styles.selectedTextStyle}
+                        inputSearchStyle={styles.inputSearchStyle}
+                        iconStyle={styles.iconStyle}
+                        data={div}
+                        search
+                        maxHeight={300}
+                        labelField="label"
+                        valueField="value"
+                        placeholder={!isFocus ? 'Select division' : '...'}
+                        searchPlaceholder="Search..."
+                        value={value}
+                        onFocus={() => setIsFocus(true)}
+                        onBlur={() => setIsFocus(false)}
+                        onChange={item => {
+                            setValue3(item.value);
+                            setIsFocus(false);
+                        }}
+                        renderLeftIcon={() => (
+                            <AntDesign
+                                style={styles.icon}
+                                color={isFocus ? 'blue' : 'black'}
+                                name="Safety"
+                                size={20}
+                            />
+                        )}
+                    />
+                </View>
+                {/* {console.log("course Name :::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::",value6)}
+                {console.log("couse_sub Name :::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:::",couse_sub)} */}
+
+
+                <View style={{ margin: 10 }}>
+                    <Dropdown
+                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        placeholderStyle={styles.placeholderStyle}
+                        selectedTextStyle={styles.selectedTextStyle}
+                        inputSearchStyle={styles.inputSearchStyle}
+                        iconStyle={styles.iconStyle}
+                        data={filter_sub}
+                        search
+                        maxHeight={300}
+                        labelField="label"
+                        valueField="value"
+                        placeholder={!isFocus ? 'Select Subject Name' : '...'}
+                        searchPlaceholder="Search..."
+                        value={value}
+                        onFocus={() => setIsFocus(true)}
+                        onBlur={() => setIsFocus(false)}
+                        onChange={item => {
+                            setValue4(item.value);
+                            setIsFocus(false);
+                        }}
+                        renderLeftIcon={() => (
+                            <AntDesign
+                                style={styles.icon}
+                                color={isFocus ? 'blue' : 'black'}
+                                name="Safety"
+                                size={20}
+                            />
+                        )}
+                    />
+                </View>
+
+                <View style={{ margin: 10 }}>
+                    <Dropdown
+                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        placeholderStyle={styles.placeholderStyle}
+                        selectedTextStyle={styles.selectedTextStyle}
+                        inputSearchStyle={styles.inputSearchStyle}
+                        iconStyle={styles.iconStyle}
+                        data={unit}
+                        search
+                        maxHeight={300}
+                        labelField="label"
+                        valueField="value"
+                        placeholder={!isFocus ? 'Select Unit Name' : '...'}
+                        searchPlaceholder="Search..."
+                        value={value}
+                        onFocus={() => setIsFocus(true)}
+                        onBlur={() => setIsFocus(false)}
+                        onChange={item => {
+                            setValue5(item.value);
+                            setIsFocus(false);
+                        }}
+                        renderLeftIcon={() => (
+                            <AntDesign
+                                style={styles.icon}
+                                color={isFocus ? 'blue' : 'black'}
+                                name="Safety"
+                                size={20}
+                            />
+                        )}
+                    />
+                </View>
+            </View>
+            
+            
+            <View style={styles.btns} id="btns">
+                <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center', padding: 5 }}>
+                    <Button
+                        title="Next"
+                        onPress={() => navigation.navigate('Start_Attendance', { "faculty_Name": value6, "sam_Name": value2, "div_Name": value3, "subject_Name": value4, "unit_Name": value5, "course_Name": value, "token": token })}
+                    // onPress={() => { console.log("value", value) ; ;console.log("taker name",value2); }}
+                    />
+                </View>
+
+                <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center', padding: 5 }}>
+                    <Button
+                        title="Generate QR Code"
+                        onPress={() => generate_qr()}
+                        color= "#3C84AB"
+                    />
+                </View>
+            </View>
+
+            <View style={styles.qrcode} id="qrcode">
+                
+                <QRCode
+                //QR code value
+                value={qrValue}
+                //size of QR Code
+                size={250}
+                //Color of the QR Code 
+                color="black"
+                //Background Color of the QR Code 
+                backgroundColor="white"
+                //Logo of in the center of QR Code 
+                logo={{
+                    url:
+                    'https://media.licdn.com/dms/image/C5603AQG7mktpW1KPYg/profile-displayphoto-shrink_200_200/0/1656673510662?e=1680739200&v=beta&t=76YtL75ihlvczBcS8yXhhnhfQlnJdgP2gDGY5Jl3Tvg',
+                }}
+                //Center Logo size  
+                logoSize={30}
+                //Center Logo margin 
+                logoMargin={2}
+                //Center Logo radius 
+                logoBorderRadius={15}
+                //Center Logo background 
+                // logoBackgroundColor="white"
+                /> 
+            </View>
+
+        </ScrollView>
+
+    );
+
+    
+    
+};
+
+export default Attendance_fill_data;
+
 
 

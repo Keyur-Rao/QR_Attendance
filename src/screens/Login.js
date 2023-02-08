@@ -49,7 +49,7 @@ function Login({ navigation }) {
     if(storedUser) {
       navigation.navigate('Attendance_fill_data')
     }else{
-      signin()
+      signin();
     }
   }
 
@@ -60,10 +60,10 @@ function Login({ navigation }) {
         if (hasPlayService) {
           GoogleSignin.signIn().then(async (userInfo) => {
             let token = await GoogleSignin.getTokens()
-            console.log("token in login", token)
+            console.log("token in login", token);
             if (token.accessToken) {
               try {
-                await AsyncStorage.setItem('token', JSON.stringify(token.accessToken))
+                await AsyncStorage.setItem('token', JSON.stringify(token.accessToken));
                 navigation.navigate('Attendance_fill_data')
               } catch (e) {
                 console.log('Failed to save the data to the storage', e);
@@ -114,6 +114,8 @@ function Login({ navigation }) {
           </View>
         </ScrollView>
       </SafeAreaView>
+
+      
     </>
   );
 }

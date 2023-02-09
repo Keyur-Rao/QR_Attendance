@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Slider } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Slider, ToastAndroid, Button, AsyncStorage } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import axios from 'axios';
 
@@ -36,12 +36,15 @@ const wbOrder = {
 
 const landmarkSize = 2;
 
+
+
 export default class CameraScreen extends React.Component {
 
 
   constructor(props) {
     super(props);
     this.state = {
+      isScanTeacherQR: false,
       flash: 'off',
       orientation: 2,
       zoom: 0,
@@ -62,18 +65,17 @@ export default class CameraScreen extends React.Component {
       faces: [],
       textBlocks: [],
       barcodes: [],
+      teacherBarcodes: [],
       inQueue: false,
       initCount: 0,
       studentAllName: [],
       barcodeAllData: [],
+      teacherBarcodeData : {},
       uniueBarcodeData: [],
       uniqueResponseData: [],
       allImageUrl: []
     };
   }
-
-
-
 
   componentDidMount() {
   }
@@ -121,9 +123,9 @@ export default class CameraScreen extends React.Component {
     });
   }
 
-  barcodeMethod = async function (barcodes) {
+  barcodeMethod = async (barcodes)=> {
     barcodes.forEach(barcode => {
-      // console.log("barcodes:::::::", (barcode["data"]));
+      // console.log("barcode data :::::::> ", (barcode['data']));
 
       this.setState({ barcodeAllData: [...this.state.barcodeAllData, barcode["data"]] })
     });
@@ -133,6 +135,22 @@ export default class CameraScreen extends React.Component {
     // console.log("uniueBarcodeData:", this.setState.uniueBarcodeData);
   }
 
+  barcodeMethodTeacher = async (barcodes) =>{
+    barcodes.forEach(barcode =>{
+        // console.log(barcode['data']);
+        // console.log(typeof(barcode['data']));
+        // data = JSON.stringify(barcode['data']);
+        if (JSON.parse(barcode['data'])['faculty_Name']) {
+          // console.log(JSON.parse(barcode['data'])['faculty_Name']);
+          // console.log(this.state.teacherBarcodeData);
+          if (!this.state.teacherBarcodeData['faculty_Name']) {
+              this.setState({ teacherBarcodeData : JSON.parse(barcode['data']) });
+              this.setState({ isScanTeacherQR: true});
+              // console.log("teacher qr not scaned yet.");
+          }
+        }
+    });
+  }
 
 
   // takePicture = async function () {
@@ -280,11 +298,28 @@ export default class CameraScreen extends React.Component {
 
  
   barcodeRecognized = ({ barcodes }) => {
-    if (barcodes && barcodes.length) {
-      this.barcodeMethod(barcodes)
+    
+  if (!this.state.isScanTeacherQR) {
+    ToastAndroid.showWithGravityAndOffset(
+      'Please scan Teacher QR First!',
+      ToastAndroid.LONG,
+      ToastAndroid.CENTER,
+      25,
+      50,
+      );
+      if (barcodes && barcodes.length) {
+        // console.log(barcodes);
+        this.barcodeMethodTeacher(barcodes);
+      }
+      this.setState({ barcodes });
     }
-    // console.log("barcodes::",barcodes);
-    this.setState({ barcodes });
+    else{
+      if (barcodes && barcodes.length) {
+        this.barcodeMethod(barcodes)
+      }
+      // console.log("barcodes::",barcodes);
+      this.setState({ barcodes });
+    }
   };
 
   renderBarcodes = () => (
@@ -292,9 +327,6 @@ export default class CameraScreen extends React.Component {
       {this.state.barcodes.map(this.renderBarcode)}
     </View>
   );
-
-
-
 
   renderBarcode = ({ bounds, data, type }) => (
     <React.Fragment key={data + bounds.origin.x}>
@@ -312,6 +344,16 @@ export default class CameraScreen extends React.Component {
       </View>
     </React.Fragment>
   );
+
+  // showToastWithGravityAndOffset = () => {
+  //   ToastAndroid.showWithGravityAndOffset(
+  //     'A wild toast appeared!',
+  //     ToastAndroid.LONG,
+  //     ToastAndroid.CENTER,
+  //     25,
+  //     50,
+  //   );
+  // };
 
   renderCamera() {
     const { canDetectFaces, canDetectText, canDetectBarcode, studentAllName } = this.state;
@@ -349,28 +391,20 @@ export default class CameraScreen extends React.Component {
             ? RNCamera.Constants.FaceDetection.Classifications.all
             : undefined
         }
-
-
         onFacesDetected={canDetectFaces ? this.facesDetected : null}
         onTextRecognized={canDetectText ? this.textRecognized : null}
         onGoogleVisionBarcodesDetected={canDetectBarcode ? this.barcodeRecognized : null}
         googleVisionBarcodeType={RNCamera.Constants.GoogleVisionBarcodeDetection.BarcodeType.ALL}
         googleVisionBarcodeMode={
           RNCamera.Constants.GoogleVisionBarcodeDetection.BarcodeMode.ALTERNATE
-        }
-      >
-        <View
-          style={{
-            flex: 0.5,
-          }}
-        >
-          <View
-            style={{
+        }>
+
+        <View style={{flex: 0.5,}}>
+          <View style={{
               backgroundColor: 'transparent',
               flexDirection: 'row',
               justifyContent: 'space-around',
-            }}
-          >
+            }}>
             <TouchableOpacity style={styles.flipButton} onPress={this.toggleFacing.bind(this)}>
               <Text style={styles.flipText}> FLIP </Text>
             </TouchableOpacity>
@@ -384,6 +418,12 @@ export default class CameraScreen extends React.Component {
           >
           </View>
         </View>
+        
+        {/* <Button
+          title="Toggle Toast With Gravity & Offset"
+          onPress={() => this.showToastWithGravityAndOffset()}
+        /> */}
+        {/* {true && this.showToastWithGravityAndOffset()} */}
 
         <View
           style={{
@@ -391,8 +431,7 @@ export default class CameraScreen extends React.Component {
             backgroundColor: 'transparent',
             flexDirection: 'row',
             alignSelf: 'flex-end',
-          }}
-        >
+          }}>
           <Slider
             style={{ width: 150, marginTop: 15, alignSelf: 'flex-end' }}
             onValueChange={this.setFocusDepth.bind(this)}
@@ -428,15 +467,13 @@ export default class CameraScreen extends React.Component {
 
           </TouchableOpacity> */}
         </View>
-        <View
-          style={{
+        <View style={{
             flex: 0.1,
             backgroundColor: 'transparent',
             flexDirection: 'row',
             // alignSelf: 'flex-end',
             alignSelf: 'center',
-          }}
-        >
+          }}>
 
           <TouchableOpacity style={[
             styles.flipButton,
@@ -448,9 +485,10 @@ export default class CameraScreen extends React.Component {
           ]}
             onPress={this.toggle('canDetectBarcode')} >
             <Text style={styles.start_end_button}>
-              {!canDetectBarcode ? 'Start' : 'Pause'}
+              {!canDetectBarcode ? 'START' : 'PAUSE'}
             </Text>
           </TouchableOpacity>
+
           <TouchableOpacity
             style={[
               styles.flipButton,
@@ -466,37 +504,35 @@ export default class CameraScreen extends React.Component {
 
           </TouchableOpacity>
 
-
-
-
         </View>
+
         {this.state.zoom !== 0 && (
           <Text style={[styles.flipText, styles.zoomText]}>Zoom: {this.state.zoom}</Text>
         )}
+
         <View
           style={{
             flex: 0.1,
             backgroundColor: 'transparent',
             flexDirection: 'row',
             alignSelf: 'flex-end',
-          }}
-        >
+          }}>
+
           <TouchableOpacity
             style={[styles.flipButton, { flex: 0.1, alignSelf: 'flex-end' }]}
-            onPress={this.zoomIn.bind(this)}
-          >
+            onPress={this.zoomIn.bind(this)}>
             <Text style={styles.flipText}> + </Text>
           </TouchableOpacity>
+
           <TouchableOpacity
             style={[styles.flipButton, { flex: 0.1, alignSelf: 'flex-end' }]}
-            onPress={this.zoomOut.bind(this)}
-          >
+            onPress={this.zoomOut.bind(this)}>
             <Text style={styles.flipText}> - </Text>
           </TouchableOpacity>
+
           <TouchableOpacity
             style={[styles.flipButton, { flex: 0.25, alignSelf: 'flex-end' }]}
-            onPress={this.toggleFocus.bind(this)}
-          >
+            onPress={this.toggleFocus.bind(this)}>
             <Text style={styles.flipText}> AF : {this.state.autoFocus} </Text>
           </TouchableOpacity>
           {/* <TouchableOpacity
@@ -506,6 +542,7 @@ export default class CameraScreen extends React.Component {
             <Text style={styles.flipText}> SNAP </Text>
           </TouchableOpacity> */}
         </View>
+
         {/* {!!canDetectFaces && this.renderFaces()}
         {!!canDetectFaces && this.renderLandmarks()}
         {!!canDetectText && this.renderTextBlocks()} */}

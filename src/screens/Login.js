@@ -64,7 +64,10 @@ function Login({ navigation }) {
             if (token.accessToken) {
               try {
                 await AsyncStorage.setItem('token', JSON.stringify(token.accessToken));
-                navigation.navigate('Attendance_fill_data')
+                await AsyncStorage.setItem('isTeacher', JSON.stringify(false));
+                let isTeacher = JSON.parse(await AsyncStorage.getItem('isTeacher'));
+                // console.log("Is Teacher " + isTeacher);
+                isTeacher ? navigation.navigate('Attendance_fill_data') : navigation.navigate('Scan_Teacher_QR');
               } catch (e) {
                 console.log('Failed to save the data to the storage', e);
                 // alert('Failed to save the data to the storage' ,e)

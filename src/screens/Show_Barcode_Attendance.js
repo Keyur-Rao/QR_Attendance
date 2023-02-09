@@ -19,13 +19,13 @@ const Separator = () => (
 function Show_Barcode_Attendance({ navigation }) {
 
     console.log("show barcode attendance screen ********************************************",new Date().getDate());
-    console.log("!!how barcode attendance screen  !!!!!!!!token!!!!!!!!!!!!!!!!!!!!!!!!!!!!",navigation.getParam('token'));
-    let Faculty_Name = navigation.getParam('faculty_Name')
-    let sam_Name = navigation.getParam('sam_Name')
-    let div_Name = navigation.getParam('div_Name')
-    let subject_Name = navigation.getParam('subject_Name')
-    let unit_Name = navigation.getParam('unit_Name')
-    let course_Name = navigation.getParam('course_Name')
+    console.log("!!show barcode attendance screen  !!!!!!!!token!!!!!!!!!!!!!!!!!!!!!!!!!!!!",navigation.getParam('token'));
+    let Faculty_Name = navigation.getParam('faculty_Name');
+    let sam_Name = navigation.getParam('sam_Name');
+    let div_Name = navigation.getParam('div_Name');
+    let subject_Name = navigation.getParam('subject_Name');
+    let unit_Name = navigation.getParam('unit_Name');
+    let course_Name = navigation.getParam('course_Name');
 
     const [token, setToken] = useState(null);
     let name_Array = []

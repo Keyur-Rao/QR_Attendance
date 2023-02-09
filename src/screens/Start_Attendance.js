@@ -34,7 +34,7 @@ function Start_Attendance({ navigation }) {
               >
          {/* <Icon name="camera" size={50} color="#fff" /> */}
           </TouchableOpacity>
-          <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center', padding: 5 }}>
+          <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center', padding: 5, marginTop: 30}}>
           <Button title="Start Attendance" style={styles.btn} onPress = {()=>{navigation.navigate('Final_Attendance', { "faculty_Name": navigation.getParam('faculty_Name'), "sam_Name": navigation.getParam('sam_Name'), "div_Name" : navigation.getParam('div_Name'), "subject_Name" : navigation.getParam('subject_Name'), "unit_Name" : navigation.getParam('unit_Name'),"course_Name" : navigation.getParam('course_Name'), "token" : navigation.getParam('token') })}}/> 
           </View>
           </View>

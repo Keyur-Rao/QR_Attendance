@@ -1,13 +1,14 @@
-import React from 'react'
-import { createAppContainer } from 'react-navigation'
-import { createStackNavigator } from 'react-navigation-stack'
-import Home from '../screens/Home'
-import Start_Attendance from '../screens/Start_Attendance'
-import Attendance_fill_data from '../screens/Attendance_fill_data'
-import Final_Attendance from '../screens/Final_Attendance'
-import Show_Barcode_Attendance from '../screens/Show_Barcode_Attendance'
-import Login from '../screens/Login'
-import Generate_QR_Code from '../screens/Generate_QR_Code'
+import React from 'react';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import Home from '../screens/Home';
+import Start_Attendance from '../screens/Start_Attendance';
+import Attendance_fill_data from '../screens/Attendance_fill_data';
+import Final_Attendance from '../screens/Final_Attendance';
+import Show_Barcode_Attendance from '../screens/Show_Barcode_Attendance';
+import Login from '../screens/Login';
+import Generate_QR_Code from '../screens/Generate_QR_Code';
+import Scan_Teacher_QR from '../screens/Scan_Teacher_QR';
 import { useState, useEffect } from 'react';
 import { AsyncStorage } from 'react-native';
 import { Text, View, Image, StyleSheet } from 'react-native';
@@ -98,12 +99,12 @@ const MainApp = createStackNavigator({
         }
     },
 
-    Generate_QR_Code:{
-        screen: Generate_QR_Code,
+    Scan_Teacher_QR: {
+        screen: Scan_Teacher_QR,
         navigationOptions: {
             headerShown: false,
         }
-    },
+    }
  
 })
 

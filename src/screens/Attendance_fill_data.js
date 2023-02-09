@@ -101,7 +101,7 @@ function Attendance_fill_data({ navigation }) {
     const [couse_sub, setCourseSub] = useState([])
     const [filter_sub, setFilterSub] = useState([])
     const [token, setToken] = useState(null);
-    const [qrValue, setQrValue] = useState("Teacher QR");
+    const [qrValue, setQrValue] = useState("Not valid QR");
     const [qrDisplay, setQrDisplay] = useState('none');
     const [formDisplay, setFormDisplay] = useState('flex');
     const [btnsDisplay, setBtnsDisplay] = useState('flex');
@@ -239,7 +239,7 @@ function Attendance_fill_data({ navigation }) {
             course_Name : value,
             timeStamp: dateTime.toLocaleString()
         }
-        console.log(dataObj);
+        // console.log(dataObj);
         let dataString = JSON.stringify(dataObj);
         setQrValue(dataString);
         setFormDisplay('none');
@@ -298,6 +298,11 @@ const styles = StyleSheet.create({
     },
     form: {
         display: formDisplay
+    },
+    heading: {
+        fontSize: 28,
+        marginBottom: 20,
+        fontWeight: 'bold',
     }
 });
 
@@ -552,7 +557,7 @@ const styles = StyleSheet.create({
             </View>
 
             <View style={styles.qrcode} id="qrcode">
-                
+                <Text style={styles.heading}>Teacher QR Code</Text>
                 <QRCode
                 //QR code value
                 value={qrValue}

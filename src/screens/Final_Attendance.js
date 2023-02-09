@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Slider, ToastAndroid, Button, AsyncStorage } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Slider, ToastAndroid, Button } from 'react-native';
+import { AsyncStorage } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import axios from 'axios';
 
@@ -37,9 +38,8 @@ const wbOrder = {
 const landmarkSize = 2;
 
 
-
 export default class CameraScreen extends React.Component {
-
+  
 
   constructor(props) {
     super(props);
@@ -72,8 +72,9 @@ export default class CameraScreen extends React.Component {
       barcodeAllData: [],
       teacherBarcodeData : {},
       uniueBarcodeData: [],
+      uniqueTeacherBarcodeData: [],
       uniqueResponseData: [],
-      allImageUrl: []
+      allImageUrl: [],
     };
   }
 
@@ -125,28 +126,21 @@ export default class CameraScreen extends React.Component {
 
   barcodeMethod = async (barcodes)=> {
     barcodes.forEach(barcode => {
-      // console.log("barcode data :::::::> ", (barcode['data']));
-
-      this.setState({ barcodeAllData: [...this.state.barcodeAllData, barcode["data"]] })
+      if (! JSON.parse(barcode['data'])['faculty_Name']) {
+          this.setState({ barcodeAllData: [...this.state.barcodeAllData, barcode["data"]] })
+      }
     });
     // console.log("this.state.barcodeAllData:::::::::", [...new Set(this.state.barcodeAllData)]);
     // let uniueBarcodeData = [...new Set(this.state.barcodeAllData)]
-    this.setState({ uniueBarcodeData: [...new Set(this.state.barcodeAllData)] })
-    // console.log("uniueBarcodeData:", this.setState.uniueBarcodeData);
+    this.setState({ uniueBarcodeData: [...new Set(this.state.barcodeAllData)] });
   }
 
   barcodeMethodTeacher = async (barcodes) =>{
     barcodes.forEach(barcode =>{
-        // console.log(barcode['data']);
-        // console.log(typeof(barcode['data']));
-        // data = JSON.stringify(barcode['data']);
         if (JSON.parse(barcode['data'])['faculty_Name']) {
-          // console.log(JSON.parse(barcode['data'])['faculty_Name']);
-          // console.log(this.state.teacherBarcodeData);
           if (!this.state.teacherBarcodeData['faculty_Name']) {
               this.setState({ teacherBarcodeData : JSON.parse(barcode['data']) });
               this.setState({ isScanTeacherQR: true});
-              // console.log("teacher qr not scaned yet.");
           }
         }
     });
@@ -296,29 +290,21 @@ export default class CameraScreen extends React.Component {
 
   toggle = value => () => this.setState(prevState => ({ [value]: !prevState[value] }));
 
- 
-  barcodeRecognized = ({ barcodes }) => {
-    
-  if (!this.state.isScanTeacherQR) {
-    ToastAndroid.showWithGravityAndOffset(
-      'Please scan Teacher QR First!',
-      ToastAndroid.LONG,
-      ToastAndroid.CENTER,
-      25,
-      50,
-      );
-      if (barcodes && barcodes.length) {
-        // console.log(barcodes);
-        this.barcodeMethodTeacher(barcodes);
-      }
-      this.setState({ barcodes });
+
+  barcodeRecognized = async ({ barcodes }) => {
+  if (!this.state.isScanTeacherQR) {   
+    if (barcodes && barcodes.length) {
+      // console.log(barcodes);
+      this.barcodeMethodTeacher(barcodes);
     }
-    else{
-      if (barcodes && barcodes.length) {
-        this.barcodeMethod(barcodes)
-      }
-      // console.log("barcodes::",barcodes);
-      this.setState({ barcodes });
+    this.setState({ uniqueTeacherBarcodeData: barcodes });
+  }
+  else{
+    if (barcodes && barcodes.length) {
+      this.barcodeMethod(barcodes)
+    }
+    // console.log("barcodes::",barcodes);
+    this.setState({ barcodes });
     }
   };
 
@@ -345,15 +331,11 @@ export default class CameraScreen extends React.Component {
     </React.Fragment>
   );
 
-  // showToastWithGravityAndOffset = () => {
-  //   ToastAndroid.showWithGravityAndOffset(
-  //     'A wild toast appeared!',
-  //     ToastAndroid.LONG,
-  //     ToastAndroid.CENTER,
-  //     25,
-  //     50,
-  //   );
-  // };
+  showAlert = (message)=>{
+    return <TouchableOpacity style={{backgroundColor: 'grey', padding: 20, opacity: 0.7, bottom: 150, borderRadius: 50, marginHorizontal: 30}}>
+      <Text style={{textAlign: 'center', color: 'white', fontWeight: 'bold'}}>{message}</Text>
+    </TouchableOpacity>
+  }
 
   renderCamera() {
     const { canDetectFaces, canDetectText, canDetectBarcode, studentAllName } = this.state;
@@ -419,11 +401,8 @@ export default class CameraScreen extends React.Component {
           </View>
         </View>
         
-        {/* <Button
-          title="Toggle Toast With Gravity & Offset"
-          onPress={() => this.showToastWithGravityAndOffset()}
-        /> */}
-        {/* {true && this.showToastWithGravityAndOffset()} */}
+        { this.state.isScanTeacherQR ? this.showAlert("Now scan Students QR!"): this.showAlert("Please scan Teacher QR First!")}
+       
 
         <View
           style={{
@@ -488,7 +467,7 @@ export default class CameraScreen extends React.Component {
               {!canDetectBarcode ? 'START' : 'PAUSE'}
             </Text>
           </TouchableOpacity>
-
+    
           <TouchableOpacity
             style={[
               styles.flipButton,

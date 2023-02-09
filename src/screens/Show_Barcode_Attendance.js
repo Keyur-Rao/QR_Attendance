@@ -47,7 +47,8 @@ function Show_Barcode_Attendance({ navigation }) {
         }
     });
 
-
+    console.log("~~~~~~~~~~~~  Teacher is ~~~~~~~~~~~~~~");
+    console.log(navigation.getParam('teacherBarcodeData'));
    
     // fetch("https://sheet.best/api/sheets/87b86386-6b5f-4143-81d7-fad56272564c", {
     //     method: "POST",

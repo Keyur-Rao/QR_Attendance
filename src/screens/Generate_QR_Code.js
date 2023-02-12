@@ -24,8 +24,7 @@ async function Generate_QR_Code({ navigation }){
     let dataJson = JSON.parse(dataString);
     // console.log(dataJson);
     return(
-        <>
-            <View style={{paddingLeft: 50}}>
+      <View style={{paddingLeft: 50}}>
             <Text>Generate QR Code</Text>
             
             {/* <QRCode
@@ -52,7 +51,6 @@ async function Generate_QR_Code({ navigation }){
               // logoBackgroundColor="white"
             /> */}
       </View>
-        </>
     )
 }
 

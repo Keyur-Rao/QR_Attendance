@@ -47,7 +47,9 @@ function Login({ navigation }) {
   const checkLogin = async () => {
     let storedUser =  await AsyncStorage.getItem('token');
     if(storedUser) {
-      navigation.navigate('Attendance_fill_data')
+      await AsyncStorage.setItem('isTeacher', JSON.stringify(false));
+      let isTeacher = JSON.parse(await AsyncStorage.getItem('isTeacher'));
+      isTeacher ? navigation.navigate('Attendance_fill_data') : navigation.navigate('Scan_Teacher_QR');
     }else{
       signin();
     }

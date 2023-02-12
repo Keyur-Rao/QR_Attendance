@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Button, ScrollView, TouchableOpacity } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { useEffect } from 'react';
@@ -184,13 +184,13 @@ function Attendance_fill_data({ navigation }) {
                 course_data.push({ "label": element, "value": element })
             })
 
-            setFaculityName(fac_names_data)
-            setSem(sem_data)
-            setDiv(div_data)
-            setSub(sub_data)
-            setUnit(unit_data)
-            setCourse(course_data)
-            setCourseSub(course_sub_data)
+            setFaculityName(fac_names_data);
+            setSem(sem_data);
+            setDiv(div_data);
+            setSub(sub_data);
+            setUnit(unit_data);
+            setCourse(course_data);
+            setCourseSub(course_sub_data);
 
             console.log("############################", value);
 
@@ -252,7 +252,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: 'white',
         padding: 16,
-        margin: 10
+        margin: 10,
     },
     dropdown: {
         height: 50,
@@ -295,6 +295,7 @@ const styles = StyleSheet.create({
     },
     btns: {
         display: btnsDisplay,
+        marginTop: 120
     },
     form: {
         display: formDisplay
@@ -303,7 +304,21 @@ const styles = StyleSheet.create({
         fontSize: 28,
         marginBottom: 20,
         fontWeight: 'bold',
-    }
+    },
+    btn: {
+        backgroundColor: '#3C84AB',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 10,
+        borderWidth: 2,
+        borderColor: "#3C84AB",
+        margin: 10,
+    },
+    btnText: {
+        color: 'white',
+        fontSize: 18,
+        textAlign: 'center'
+    },
 });
 
     return (
@@ -313,14 +328,14 @@ const styles = StyleSheet.create({
             <View style={styles.form} id="form">
                 <View style={{ margin: 10 }}>
                     <Dropdown
-                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        style={[styles.dropdown, isFocus && { borderColor: "#3C84AB" }]}
                         placeholderStyle={styles.placeholderStyle}
                         selectedTextStyle={styles.selectedTextStyle}
                         inputSearchStyle={styles.inputSearchStyle}
                         iconStyle={styles.iconStyle}
                         data={course}
                         search
-                        maxHeight={300}
+                        // maxHeight={300}
                         labelField="label"
                         valueField="value"
                         placeholder={!isFocus ? 'Select Course Name' : '...'}
@@ -348,14 +363,14 @@ const styles = StyleSheet.create({
 
                 <View style={{ margin: 10 }}>
                     <Dropdown
-                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        style={[styles.dropdown, isFocus && { borderColor: "#3C84AB" }]}
                         placeholderStyle={styles.placeholderStyle}
                         selectedTextStyle={styles.selectedTextStyle}
                         inputSearchStyle={styles.inputSearchStyle}
                         iconStyle={styles.iconStyle}
                         data={faculityName}
                         search
-                        maxHeight={300}
+                        // maxHeight={300}
                         labelField="label"
                         valueField="value"
                         placeholder={!isFocus ? 'Select Faculty Name' : '...'}
@@ -405,14 +420,14 @@ const styles = StyleSheet.create({
 
                 <View style={{ margin: 10 }}>
                     <Dropdown
-                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        style={[styles.dropdown, isFocus && { borderColor: "#3C84AB" }]}
                         placeholderStyle={styles.placeholderStyle}
                         selectedTextStyle={styles.selectedTextStyle}
                         inputSearchStyle={styles.inputSearchStyle}
                         iconStyle={styles.iconStyle}
                         data={sem}
                         search
-                        maxHeight={300}
+                        // maxHeight={300}
                         labelField="label"
                         valueField="value"
                         placeholder={!isFocus ? 'Select semester' : '...'}
@@ -439,14 +454,14 @@ const styles = StyleSheet.create({
 
                 <View style={{ margin: 10 }}>
                     <Dropdown
-                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        style={[styles.dropdown, isFocus && { borderColor: "#3C84AB" }]}
                         placeholderStyle={styles.placeholderStyle}
                         selectedTextStyle={styles.selectedTextStyle}
                         inputSearchStyle={styles.inputSearchStyle}
                         iconStyle={styles.iconStyle}
                         data={div}
                         search
-                        maxHeight={300}
+                        // maxHeight={300}
                         labelField="label"
                         valueField="value"
                         placeholder={!isFocus ? 'Select division' : '...'}
@@ -474,14 +489,14 @@ const styles = StyleSheet.create({
 
                 <View style={{ margin: 10 }}>
                     <Dropdown
-                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        style={[styles.dropdown, isFocus && { borderColor: "#3C84AB" }]}
                         placeholderStyle={styles.placeholderStyle}
                         selectedTextStyle={styles.selectedTextStyle}
                         inputSearchStyle={styles.inputSearchStyle}
                         iconStyle={styles.iconStyle}
                         data={filter_sub}
                         search
-                        maxHeight={300}
+                        // maxHeight={300}
                         labelField="label"
                         valueField="value"
                         placeholder={!isFocus ? 'Select Subject Name' : '...'}
@@ -506,14 +521,14 @@ const styles = StyleSheet.create({
 
                 <View style={{ margin: 10 }}>
                     <Dropdown
-                        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+                        style={[styles.dropdown, isFocus && { borderColor: "#3C84AB" }]}
                         placeholderStyle={styles.placeholderStyle}
                         selectedTextStyle={styles.selectedTextStyle}
                         inputSearchStyle={styles.inputSearchStyle}
                         iconStyle={styles.iconStyle}
                         data={unit}
                         search
-                        maxHeight={300}
+                        // maxHeight={300}
                         labelField="label"
                         valueField="value"
                         placeholder={!isFocus ? 'Select Unit Name' : '...'}
@@ -539,21 +554,15 @@ const styles = StyleSheet.create({
             
             
             <View style={styles.btns} id="btns">
-                <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center', padding: 5 }}>
-                    <Button
-                        title="Next"
-                        onPress={() => navigation.navigate('Start_Attendance', { "faculty_Name": value6, "sam_Name": value2, "div_Name": value3, "subject_Name": value4, "unit_Name": value5, "course_Name": value, "token": token })}
-                    // onPress={() => { console.log("value", value) ; ;console.log("taker name",value2); }}
-                    />
-                </View>
 
-                <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center', padding: 5 }}>
-                    <Button
-                        title="Generate QR Code"
-                        onPress={() => generate_qr()}
-                        color= "#3C84AB"
-                    />
-                </View>
+                <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Start_Attendance', { "faculty_Name": value6, "sam_Name": value2, "div_Name": value3, "subject_Name": value4, "unit_Name": value5, "course_Name": value, "token": token })}>
+                    <Text style={styles.btnText}> Next </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.btn} onPress={() =>  generate_qr()}>
+                    <Text style={styles.btnText}> Generate QR Code </Text>
+                </TouchableOpacity>
+               
             </View>
 
             <View style={styles.qrcode} id="qrcode">

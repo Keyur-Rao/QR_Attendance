@@ -11,10 +11,7 @@ function Start_Attendance({ navigation }) {
   console.log("Start Attendance");
 
   return (
-    <RNCamera
-    ref={ref => {
-            this.camera = ref;
-        }}
+    <RNCamera ref={ref => { this.camera = ref }}
       captureAudio={false}
       style={{flex: 1}}
       type={RNCamera.Constants.Type.back}
@@ -24,9 +21,8 @@ function Start_Attendance({ navigation }) {
         buttonPositive: 'Ok',
         buttonNegative: 'Cancel',
       }}>
-          <View style={styles.btnAlignment}>
-            
-            <View style={{width:50}}/>
+        <View style={styles.btnAlignment}>
+           <View style={{width:50}}/>
 
           <TouchableOpacity
               activeOpacity={0.5}
@@ -34,13 +30,13 @@ function Start_Attendance({ navigation }) {
               >
          {/* <Icon name="camera" size={50} color="#fff" /> */}
           </TouchableOpacity>
+
           <View style={{ width: '100%', alignItems: 'center', justifyContent: 'center', padding: 5, marginTop: 30}}>
-          <Button title="Start Attendance" style={styles.btn} onPress = {()=>{navigation.navigate('Final_Attendance', { "faculty_Name": navigation.getParam('faculty_Name'), "sam_Name": navigation.getParam('sam_Name'), "div_Name" : navigation.getParam('div_Name'), "subject_Name" : navigation.getParam('subject_Name'), "unit_Name" : navigation.getParam('unit_Name'),"course_Name" : navigation.getParam('course_Name'), "token" : navigation.getParam('token') })}}/> 
+            <TouchableOpacity style={styles.btn} onPress = {()=>{navigation.navigate('Final_Attendance', { "faculty_Name": navigation.getParam('faculty_Name'), "sam_Name": navigation.getParam('sam_Name'), "div_Name" : navigation.getParam('div_Name'), "subject_Name" : navigation.getParam('subject_Name'), "unit_Name" : navigation.getParam('unit_Name'),"course_Name" : navigation.getParam('course_Name'), "token" : navigation.getParam('token') })}} >
+              <Text style={styles.btnText}>Start Attendance</Text>
+            </TouchableOpacity>
           </View>
-          </View>
-
-          
-
+        </View>
     </RNCamera>
 
 
@@ -131,7 +127,18 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   btn: {
-    backgroundColor:'red'
-  }
+    backgroundColor: '#3C84AB',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "#3C84AB",
+    margin: 10,
+  },
+  btnText: {
+      color: 'white',
+      fontSize: 18,
+      textAlign: 'center'
+  },
 });
 export default Start_Attendance;

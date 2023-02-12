@@ -75,10 +75,15 @@ export default class CameraScreen extends React.Component {
       uniqueTeacherBarcodeData: [],
       uniqueResponseData: [],
       allImageUrl: [],
+      isTeacher: null
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    let isT = await AsyncStorage.getItem('isTeacher');
+    isT = JSON.parse(isT);
+    this.setState({ isTeacher : isT});
+    console.log(this.state.isTeacher);
   }
 
   toggleFacing() {
@@ -292,7 +297,7 @@ export default class CameraScreen extends React.Component {
 
 
   barcodeRecognized = async ({ barcodes }) => {
-  if (!this.state.isScanTeacherQR) {   
+  if (!this.state.isTeacher && !this.state.isScanTeacherQR) {   
     if (barcodes && barcodes.length) {
       // console.log(barcodes);
       this.barcodeMethodTeacher(barcodes);
@@ -332,7 +337,7 @@ export default class CameraScreen extends React.Component {
   );
 
   showAlert = (message)=>{
-    return <TouchableOpacity style={{backgroundColor: 'grey', padding: 20, opacity: 0.7, bottom: 150, borderRadius: 50, marginHorizontal: 30}}>
+    return <TouchableOpacity style={{backgroundColor: 'grey', padding: 20, opacity: 0.7, bottom: 200, borderRadius: 50, marginHorizontal: 30}}>
       <Text style={{textAlign: 'center', color: 'white', fontWeight: 'bold'}}>{message}</Text>
     </TouchableOpacity>
   }
@@ -401,7 +406,8 @@ export default class CameraScreen extends React.Component {
           </View>
         </View>
         
-        { this.state.isScanTeacherQR ? this.showAlert("Now scan Students QR!"): this.showAlert("Please scan Teacher QR First!")}
+       
+       {!this.state.isTeacher ? this.state.isScanTeacherQR ? this.showAlert("Now scan Students QR Code"): this.showAlert("Please scan Teacher QR First!") : this.showAlert("Scan Student's QR Code")}
        
 
         <View
@@ -424,7 +430,6 @@ export default class CameraScreen extends React.Component {
             flex: 0.1,
             backgroundColor: 'transparent',
             flexDirection: 'row',
-            // alignSelf: 'flex-end',
             alignSelf: 'center',
           }}
         >
@@ -451,17 +456,18 @@ export default class CameraScreen extends React.Component {
             backgroundColor: 'transparent',
             flexDirection: 'row',
             // alignSelf: 'flex-end',
-            alignSelf: 'center',
+            // alignSelf: 'center',
+            justifyContent: "space-around"
           }}>
 
           <TouchableOpacity style={[
             styles.flipButton,
+            styles.btn,
             {
               flex: 0.3,
               alignSelf: 'flex-end',
-              backgroundColor: this.state.isRecording ? 'white' : 'darkred',
             },
-          ]}
+            ]}
             onPress={this.toggle('canDetectBarcode')} >
             <Text style={styles.start_end_button}>
               {!canDetectBarcode ? 'START' : 'PAUSE'}
@@ -471,15 +477,18 @@ export default class CameraScreen extends React.Component {
           <TouchableOpacity
             style={[
               styles.flipButton,
+              styles.btn,
               {
                 flex: 0.3,
                 alignSelf: 'flex-end',
-                backgroundColor: this.state.isRecording ? 'white' : 'darkred',
               },
             ]}
-            onPress={() => { this.setState({ canDetectBarcode: false }); navigation.navigate('Show_Barcode_Attendance', { "data": this.state.uniueBarcodeData,  "faculty_Name": navigation.getParam('faculty_Name'), "sam_Name": navigation.getParam('sam_Name'), "div_Name" : navigation.getParam('div_Name'), "subject_Name" : navigation.getParam('subject_Name'), "unit_Name" : navigation.getParam('unit_Name'), "course_Name" : navigation.getParam('course_Name'), "token":navigation.getParam('token')  }) }}
+            
+            onPress={() => { 
+              this.setState({ canDetectBarcode: false }); 
+              this.state.isTeacher ? navigation.navigate('Show_Barcode_Attendance', { "data": this.state.uniueBarcodeData, "teacherBarcodeData": {"faculty_Name": navigation.getParam('faculty_Name'), "sam_Name": navigation.getParam('sam_Name'), "div_Name" : navigation.getParam('div_Name'), "subject_Name" : navigation.getParam('subject_Name'), "unit_Name" : navigation.getParam('unit_Name'), "course_Name" : navigation.getParam('course_Name')}  }) : navigation.navigate('Show_Barcode_Attendance', { "data": this.state.uniueBarcodeData, "teacherBarcodeData": this.state.teacherBarcodeData }) }}
           >
-            <Text style={styles.flipText}> END  </Text>
+            <Text style={[styles.flipText, {color: "white"} ]}> END  </Text>
 
           </TouchableOpacity>
 
@@ -548,11 +557,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 10,
     borderRadius: 8,
-    borderColor: 'white',
+    borderColor: '#3C84AB',
     borderWidth: 1,
     padding: 5,
     alignItems: 'center',
     justifyContent: 'center',
+    marginRight: 5
   },
   start_end_button: {
     color: 'white',
@@ -560,7 +570,7 @@ const styles = StyleSheet.create({
   },
 
   flipText: {
-    color: 'white',
+    color: '#3C84AB',
     fontSize: 15,
   },
   zoomText: {
@@ -615,6 +625,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     backgroundColor: 'transparent',
   },
+  btn: {
+    backgroundColor: '#3C84AB',
+    padding: 10,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "#3C84AB",
+    margin: 10
+  }
 });
 
 

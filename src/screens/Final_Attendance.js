@@ -75,7 +75,8 @@ export default class CameraScreen extends React.Component {
       uniqueTeacherBarcodeData: [],
       uniqueResponseData: [],
       allImageUrl: [],
-      isTeacher: null
+      isTeacher: null,
+      onDetect: {},
     };
   }
 
@@ -142,6 +143,7 @@ export default class CameraScreen extends React.Component {
 
   barcodeMethodTeacher = async (barcodes) =>{
     barcodes.forEach(barcode =>{
+        // console.log(JSON.parse(JSON.stringify(barcode['data'])));
         if (JSON.parse(barcode['data'])['faculty_Name']) {
           if (!this.state.teacherBarcodeData['faculty_Name']) {
               this.setState({ teacherBarcodeData : JSON.parse(barcode['data']) });
@@ -342,6 +344,19 @@ export default class CameraScreen extends React.Component {
     </TouchableOpacity>
   }
 
+  showName = (name)=>{
+    setTimeout(() => {
+      this.setState({onDetect: { isDetect: false, detectedName: ""}});
+    }, 5000);
+    return <Text style={{color: 'green', fontSize: 18, padding: 5, textAlign: 'center'}}> {name}  </Text>
+  }
+
+  onBarCodeRead = async (barcode) => {
+    // console.log(barcode);
+    const name = JSON.parse(barcode.data)['faculty_Name'] || JSON.parse(barcode.data)['Name'];
+    this.setState({ onDetect : {isDetect: true, detectedName: name} })
+  }
+
   renderCamera() {
     const { canDetectFaces, canDetectText, canDetectBarcode, studentAllName } = this.state;
     const { navigation } = this.props;
@@ -378,6 +393,7 @@ export default class CameraScreen extends React.Component {
             ? RNCamera.Constants.FaceDetection.Classifications.all
             : undefined
         }
+        onBarCodeRead={this.onBarCodeRead}
         onFacesDetected={canDetectFaces ? this.facesDetected : null}
         onTextRecognized={canDetectText ? this.textRecognized : null}
         onGoogleVisionBarcodesDetected={canDetectBarcode ? this.barcodeRecognized : null}
@@ -408,8 +424,9 @@ export default class CameraScreen extends React.Component {
         
        
        {!this.state.isTeacher ? this.state.isScanTeacherQR ? this.showAlert("Now scan Students QR Code"): this.showAlert("Please scan Teacher QR First!") : this.showAlert("Scan Student's QR Code")}
-       
 
+       {this.state.onDetect.isDetect && this.showName(this.state.onDetect.detectedName)}
+       
         <View
           style={{
             flex: 0.4,

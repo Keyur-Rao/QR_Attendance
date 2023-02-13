@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-am\\values-am.xml",
+            "outputFile": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\67ff0aaf930f65024e6c37d99bc9e852\\core-1.6.0\\res\\values-am\\values-am.xml",
+                    "source": "/home/rao/.gradle/caches/transforms-2/files-2.1/122df2e57d294d1a53db26bbc3b813c1/core-1.6.0/res/values-am/values-am.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\b30aa8f2c38872540ef1352302c9199c\\jetified-play-services-basement-17.6.0\\res\\values-am\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "190",
-                        "endOffsets": "437"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3806",
-                        "endColumns": "190",
-                        "endOffsets": "3992"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\93e99cc524f9e4f775937ead40ad032e\\appcompat-1.2.0\\res\\values-am\\values-am.xml",
+                    "source": "/home/rao/.gradle/caches/transforms-2/files-2.1/062c584e7105f32bea72d749c12db8a1/appcompat-1.2.0/res/values-am/values-am.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\7d64a1cd2514583b2a458dd887234110\\jetified-play-services-base-17.6.0\\res\\values-am\\values.xml",
+                    "source": "/home/rao/.gradle/caches/transforms-2/files-2.1/a7dd160065f0b3988204d0d05b5b1c5a/jetified-play-services-basement-17.6.0/res/values-am/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "190",
+                        "endOffsets": "437"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3806",
+                        "endColumns": "190",
+                        "endOffsets": "3992"
+                    }
+                },
+                {
+                    "source": "/home/rao/.gradle/caches/transforms-2/files-2.1/922ea0bf8ee19c8576b37da3bc10a817/jetified-play-services-base-17.6.0/res/values-am/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

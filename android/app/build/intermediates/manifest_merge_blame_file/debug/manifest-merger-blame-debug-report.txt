@@ -8,283 +8,283 @@
 8        android:targetSdkVersion="31" />
 9
 10    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-10-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:6:3-76
-10-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:6:20-73
+10-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:6:3-76
+10-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:6:20-73
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:4:6-68
-11-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:4:23-65
+11-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:4:6-68
+11-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:4:23-65
 12    <uses-permission android:name="android.permission.VIBRATE" /> <!-- These require runtime permissions on M -->
-12-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:7:3-64
-12-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:7:20-61
+12-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:7:3-64
+12-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:7:20-61
 13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-13-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:9:3-78
-13-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:9:20-75
+13-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:9:3-78
+13-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:9:20-75
 14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-14-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:10:3-79
-14-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:10:20-76
+14-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:10:3-79
+14-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:10:20-76
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:4:6-68
-15-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:4:23-65
+15-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:4:6-68
+15-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:4:23-65
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:13:3-77
-16-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:13:20-74
+16-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:13:3-77
+16-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:13:20-74
 17    <uses-permission android:name="android.permission.CAMERA" /> <!-- /* Include this only if you are planning to use the microphone for video recording */ -->
-17-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:15:3-79
-17-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:15:20-60
+17-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:15:3-79
+17-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:15:20-60
 18    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission> -->
 19    <!-- /* Include this only if you are planning to use the camera roll */ -->
 20    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-20-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:9:3-78
-20-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:9:20-75
+20-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:9:3-78
+20-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:9:20-75
 21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- END OPTIONAL PERMISSIONS -->
-21-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:10:3-79
-21-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:10:20-76
+21-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:10:3-79
+21-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:10:20-76
 22    <queries>
-22-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:23:3-30:13
+22-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:23:3-30:13
 23
 24        <!-- Support checking for http(s) links via the Linking API -->
 25        <intent>
-25-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:25:5-29:14
+25-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:25:5-29:14
 26            <action android:name="android.intent.action.VIEW" />
-26-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:26:7-59
-26-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:26:15-56
+26-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:26:7-59
+26-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:26:15-56
 27
 28            <category android:name="android.intent.category.BROWSABLE" />
-28-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:27:7-68
-28-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:27:17-65
+28-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:27:7-68
+28-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:27:17-65
 29
 30            <data android:scheme="https" />
-30-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:28:7-38
-30-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:28:13-35
+30-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:28:7-38
+30-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:28:13-35
 31        </intent>
 32        <intent>
-32-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-13:18
+32-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:9-13:18
 33            <action android:name="android.media.action.IMAGE_CAPTURE" />
-33-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-73
-33-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:21-70
+33-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-73
+33-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:21-70
 34        </intent>
 35    </queries>
 36
 37    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-37-->[com.facebook.flipper:flipper:0.75.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a8f6015f96666ab8d93bfe5b64998bc8\jetified-flipper-0.75.1\AndroidManifest.xml:16:5-76
-37-->[com.facebook.flipper:flipper:0.75.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\a8f6015f96666ab8d93bfe5b64998bc8\jetified-flipper-0.75.1\AndroidManifest.xml:16:22-73
+37-->[com.facebook.flipper:flipper:0.75.1] /home/rao/.gradle/caches/transforms-2/files-2.1/7058ed9564b832b922b07d1191f26dc2/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
+37-->[com.facebook.flipper:flipper:0.75.1] /home/rao/.gradle/caches/transforms-2/files-2.1/7058ed9564b832b922b07d1191f26dc2/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
 38
 39    <uses-feature
-39-->[:react-native-camera] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-camera\android\build\intermediates\library_manifest\mlkitDebug\AndroidManifest.xml:11:5-13:36
+39-->[:react-native-camera] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:11:5-13:36
 40        android:name="android.hardware.camera"
-40-->[:react-native-camera] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-camera\android\build\intermediates\library_manifest\mlkitDebug\AndroidManifest.xml:12:9-47
+40-->[:react-native-camera] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:12:9-47
 41        android:required="false" />
-41-->[:react-native-camera] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-camera\android\build\intermediates\library_manifest\mlkitDebug\AndroidManifest.xml:13:9-33
+41-->[:react-native-camera] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:13:9-33
 42    <uses-feature
-42-->[:react-native-camera] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-camera\android\build\intermediates\library_manifest\mlkitDebug\AndroidManifest.xml:14:5-16:36
+42-->[:react-native-camera] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:14:5-16:36
 43        android:name="android.hardware.camera.autofocus"
-43-->[:react-native-camera] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-camera\android\build\intermediates\library_manifest\mlkitDebug\AndroidManifest.xml:15:9-57
+43-->[:react-native-camera] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:15:9-57
 44        android:required="false" />
-44-->[:react-native-camera] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-camera\android\build\intermediates\library_manifest\mlkitDebug\AndroidManifest.xml:16:9-33
+44-->[:react-native-camera] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-camera/android/build/intermediates/library_manifest/mlkitDebug/AndroidManifest.xml:16:9-33
 45
 46    <application
-46-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:32:3-43:17
+46-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:32:3-43:17
 47        android:name="com.rao.qr.attendance.MainApplication"
-47-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:32:16-47
+47-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:32:16-47
 48        android:allowBackup="false"
-48-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:32:186-213
+48-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:32:186-213
 49        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-49-->[androidx.core:core:1.6.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\67ff0aaf930f65024e6c37d99bc9e852\core-1.6.0\AndroidManifest.xml:24:18-86
+49-->[androidx.core:core:1.6.0] /home/rao/.gradle/caches/transforms-2/files-2.1/122df2e57d294d1a53db26bbc3b813c1/core-1.6.0/AndroidManifest.xml:24:18-86
 50        android:debuggable="true"
 51        android:exported="true"
-51-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:32:48-71
+51-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:32:48-71
 52        android:icon="@mipmap/ic_launcher"
-52-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:32:105-139
+52-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:32:105-139
 53        android:label="@string/app_name"
-53-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:32:72-104
+53-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:32:72-104
 54        android:roundIcon="@mipmap/ic_launcher_round"
-54-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:32:140-185
+54-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:32:140-185
 55        android:supportsRtl="true"
-55-->[com.github.nomi9995:VideoCompressor:715bcc16e9] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\142244284209bca3479094ff113da3b1\jetified-VideoCompressor-715bcc16e9\AndroidManifest.xml:16:9-35
+55-->[com.github.nomi9995:VideoCompressor:715bcc16e9] /home/rao/.gradle/caches/transforms-2/files-2.1/725edd3180e86de7bd9322bb2fe73beb/jetified-VideoCompressor-715bcc16e9/AndroidManifest.xml:16:9-35
 56        android:theme="@style/AppTheme"
-56-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:32:214-245
+56-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:32:214-245
 57        android:usesCleartextTraffic="true" >
-57-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:32:246-281
+57-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:32:246-281
 58        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-58-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:39:5-82
-58-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:39:15-79
+58-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:39:5-82
+58-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:39:15-79
 59        <activity
-59-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:33:5-38:16
+59-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:33:5-38:16
 60            android:name="com.rao.qr.attendance.MainActivity"
-60-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:33:15-43
+60-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:33:15-43
 61            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-61-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:33:101-178
+61-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:33:101-178
 62            android:exported="true"
-62-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:33:44-67
+62-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:33:44-67
 63            android:label="@string/app_name"
-63-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:33:68-100
+63-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:33:68-100
 64            android:launchMode="singleTask"
-64-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:33:179-210
+64-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:33:179-210
 65            android:windowSoftInputMode="adjustResize" >
-65-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:33:211-253
+65-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:33:211-253
 66            <intent-filter>
-66-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:34:7-37:23
+66-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:34:7-37:23
 67                <action android:name="android.intent.action.MAIN" />
-67-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:35:9-61
-67-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:35:17-58
+67-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:35:9-61
+67-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:35:17-58
 68
 69                <category android:name="android.intent.category.LAUNCHER" />
-69-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:36:9-69
-69-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:36:19-66
+69-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:36:9-69
+69-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:36:19-66
 70            </intent-filter>
 71        </activity>
 72
 73        <meta-data
-73-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:40:5-42:33
+73-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:40:5-42:33
 74            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
-74-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:41:5-62
+74-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:41:5-62
 75            android:value="ocr, face" />
-75-->H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\android\app\src\main\AndroidManifest.xml:42:5-30
+75-->/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/AndroidManifest.xml:42:5-30
 76
 77        <provider
-77-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:9-27:20
+77-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-27:20
 78            android:name="androidx.core.content.FileProvider"
-78-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-62
+78-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-62
 79            android:authorities="com.rao.qr.attendance.provider"
-79-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-60
+79-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-60
 80            android:exported="false"
-80-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-37
+80-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-37
 81            android:grantUriPermissions="true" >
-81-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-47
+81-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-47
 82            <meta-data
-82-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-26:58
+82-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-26:58
 83                android:name="android.support.FILE_PROVIDER_PATHS"
-83-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:17-67
+83-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
 84                android:resource="@xml/provider_paths" />
-84-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:17-55
+84-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:17-55
 85        </provider>
 86
 87        <activity
-87-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:9-31:72
+87-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:9-31:72
 88            android:name="com.yalantis.ucrop.UCropActivity"
-88-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-60
+88-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-60
 89            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-89-->[:react-native-image-crop-picker] H:\RAO Projects\REACT-NATIVE\tnr_qr_attendance_application\node_modules\react-native-image-crop-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-69
+89-->[:react-native-image-crop-picker] /home/rao/Desktop/RAO/tnr_qr_attendance_application/node_modules/react-native-image-crop-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:13-69
 90
 91        <service
-91-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8a88aae300aa83d5c14da36774d8b531\jetified-play-services-mlkit-text-recognition-16.3.0\AndroidManifest.xml:9:9-15:19
+91-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/rao/.gradle/caches/transforms-2/files-2.1/67652a2e6783ac235170b9404aad233b/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:9:9-15:19
 92            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
-92-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8a88aae300aa83d5c14da36774d8b531\jetified-play-services-mlkit-text-recognition-16.3.0\AndroidManifest.xml:10:13-91
+92-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/rao/.gradle/caches/transforms-2/files-2.1/67652a2e6783ac235170b9404aad233b/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:10:13-91
 93            android:directBootAware="true"
-93-->[com.google.mlkit:common:17.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\bf5e10dabc875cb66e2e82010209511a\jetified-common-17.2.0\AndroidManifest.xml:17:13-43
+93-->[com.google.mlkit:common:17.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/ba14ddb50ea729634bf99484e3e4bd73/jetified-common-17.2.0/AndroidManifest.xml:17:13-43
 94            android:exported="false" >
-94-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8a88aae300aa83d5c14da36774d8b531\jetified-play-services-mlkit-text-recognition-16.3.0\AndroidManifest.xml:11:13-37
+94-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/rao/.gradle/caches/transforms-2/files-2.1/67652a2e6783ac235170b9404aad233b/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:11:13-37
 95            <meta-data
-95-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8a88aae300aa83d5c14da36774d8b531\jetified-play-services-mlkit-text-recognition-16.3.0\AndroidManifest.xml:12:13-14:85
+95-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/rao/.gradle/caches/transforms-2/files-2.1/67652a2e6783ac235170b9404aad233b/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:12:13-14:85
 96                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
-96-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8a88aae300aa83d5c14da36774d8b531\jetified-play-services-mlkit-text-recognition-16.3.0\AndroidManifest.xml:13:17-114
+96-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/rao/.gradle/caches/transforms-2/files-2.1/67652a2e6783ac235170b9404aad233b/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:13:17-114
 97                android:value="com.google.firebase.components.ComponentRegistrar" />
-97-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\8a88aae300aa83d5c14da36774d8b531\jetified-play-services-mlkit-text-recognition-16.3.0\AndroidManifest.xml:14:17-82
+97-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /home/rao/.gradle/caches/transforms-2/files-2.1/67652a2e6783ac235170b9404aad233b/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:14:17-82
 98            <meta-data
-98-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\f7ff6eb63aa1e3ea073666c14b514859\jetified-play-services-mlkit-barcode-scanning-16.2.0\AndroidManifest.xml:12:13-14:85
+98-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/5a691d2ad511e08eef425cf7a107d4ee/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:12:13-14:85
 99                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
-99-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\f7ff6eb63aa1e3ea073666c14b514859\jetified-play-services-mlkit-barcode-scanning-16.2.0\AndroidManifest.xml:13:17-120
+99-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/5a691d2ad511e08eef425cf7a107d4ee/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:13:17-120
 100                android:value="com.google.firebase.components.ComponentRegistrar" />
-100-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\f7ff6eb63aa1e3ea073666c14b514859\jetified-play-services-mlkit-barcode-scanning-16.2.0\AndroidManifest.xml:14:17-82
+100-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/5a691d2ad511e08eef425cf7a107d4ee/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:14:17-82
 101            <meta-data
-101-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\f39df081e10057909138456416ab1dab\jetified-play-services-mlkit-face-detection-16.2.0\AndroidManifest.xml:12:13-14:85
+101-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/8ef9d021487cce723c211936a79397ce/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:12:13-14:85
 102                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
-102-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\f39df081e10057909138456416ab1dab\jetified-play-services-mlkit-face-detection-16.2.0\AndroidManifest.xml:13:17-114
+102-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/8ef9d021487cce723c211936a79397ce/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:13:17-114
 103                android:value="com.google.firebase.components.ComponentRegistrar" />
-103-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\f39df081e10057909138456416ab1dab\jetified-play-services-mlkit-face-detection-16.2.0\AndroidManifest.xml:14:17-82
+103-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/8ef9d021487cce723c211936a79397ce/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:14:17-82
 104            <meta-data
-104-->[com.google.mlkit:vision-common:16.5.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\aba78458a93c9ceecd48b55ba2824cd6\jetified-vision-common-16.5.0\AndroidManifest.xml:12:13-14:85
+104-->[com.google.mlkit:vision-common:16.5.0] /home/rao/.gradle/caches/transforms-2/files-2.1/1ce2063eabb36bffeb90569424027ef3/jetified-vision-common-16.5.0/AndroidManifest.xml:12:13-14:85
 105                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
-105-->[com.google.mlkit:vision-common:16.5.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\aba78458a93c9ceecd48b55ba2824cd6\jetified-vision-common-16.5.0\AndroidManifest.xml:13:17-124
+105-->[com.google.mlkit:vision-common:16.5.0] /home/rao/.gradle/caches/transforms-2/files-2.1/1ce2063eabb36bffeb90569424027ef3/jetified-vision-common-16.5.0/AndroidManifest.xml:13:17-124
 106                android:value="com.google.firebase.components.ComponentRegistrar" />
-106-->[com.google.mlkit:vision-common:16.5.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\aba78458a93c9ceecd48b55ba2824cd6\jetified-vision-common-16.5.0\AndroidManifest.xml:14:17-82
+106-->[com.google.mlkit:vision-common:16.5.0] /home/rao/.gradle/caches/transforms-2/files-2.1/1ce2063eabb36bffeb90569424027ef3/jetified-vision-common-16.5.0/AndroidManifest.xml:14:17-82
 107            <meta-data
-107-->[com.google.mlkit:common:17.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\bf5e10dabc875cb66e2e82010209511a\jetified-common-17.2.0\AndroidManifest.xml:20:13-22:85
+107-->[com.google.mlkit:common:17.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/ba14ddb50ea729634bf99484e3e4bd73/jetified-common-17.2.0/AndroidManifest.xml:20:13-22:85
 108                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
-108-->[com.google.mlkit:common:17.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\bf5e10dabc875cb66e2e82010209511a\jetified-common-17.2.0\AndroidManifest.xml:21:17-120
+108-->[com.google.mlkit:common:17.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/ba14ddb50ea729634bf99484e3e4bd73/jetified-common-17.2.0/AndroidManifest.xml:21:17-120
 109                android:value="com.google.firebase.components.ComponentRegistrar" />
-109-->[com.google.mlkit:common:17.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\bf5e10dabc875cb66e2e82010209511a\jetified-common-17.2.0\AndroidManifest.xml:22:17-82
+109-->[com.google.mlkit:common:17.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/ba14ddb50ea729634bf99484e3e4bd73/jetified-common-17.2.0/AndroidManifest.xml:22:17-82
 110        </service>
 111
 112        <provider
-112-->[com.google.mlkit:common:17.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\bf5e10dabc875cb66e2e82010209511a\jetified-common-17.2.0\AndroidManifest.xml:9:9-13:38
+112-->[com.google.mlkit:common:17.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/ba14ddb50ea729634bf99484e3e4bd73/jetified-common-17.2.0/AndroidManifest.xml:9:9-13:38
 113            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-113-->[com.google.mlkit:common:17.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\bf5e10dabc875cb66e2e82010209511a\jetified-common-17.2.0\AndroidManifest.xml:10:13-78
+113-->[com.google.mlkit:common:17.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/ba14ddb50ea729634bf99484e3e4bd73/jetified-common-17.2.0/AndroidManifest.xml:10:13-78
 114            android:authorities="com.rao.qr.attendance.mlkitinitprovider"
-114-->[com.google.mlkit:common:17.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\bf5e10dabc875cb66e2e82010209511a\jetified-common-17.2.0\AndroidManifest.xml:11:13-69
+114-->[com.google.mlkit:common:17.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/ba14ddb50ea729634bf99484e3e4bd73/jetified-common-17.2.0/AndroidManifest.xml:11:13-69
 115            android:exported="false"
-115-->[com.google.mlkit:common:17.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\bf5e10dabc875cb66e2e82010209511a\jetified-common-17.2.0\AndroidManifest.xml:12:13-37
+115-->[com.google.mlkit:common:17.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/ba14ddb50ea729634bf99484e3e4bd73/jetified-common-17.2.0/AndroidManifest.xml:12:13-37
 116            android:initOrder="99" />
-116-->[com.google.mlkit:common:17.2.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\bf5e10dabc875cb66e2e82010209511a\jetified-common-17.2.0\AndroidManifest.xml:13:13-35
+116-->[com.google.mlkit:common:17.2.0] /home/rao/.gradle/caches/transforms-2/files-2.1/ba14ddb50ea729634bf99484e3e4bd73/jetified-common-17.2.0/AndroidManifest.xml:13:13-35
 117
 118        <service
-118-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\06cbf82235ff7888b1bd00b365b37ed7\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+118-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/rao/.gradle/caches/transforms-2/files-2.1/c769b1a3abedcf995c2267250ea92e24/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
 119            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-119-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\06cbf82235ff7888b1bd00b365b37ed7\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+119-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/rao/.gradle/caches/transforms-2/files-2.1/c769b1a3abedcf995c2267250ea92e24/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
 120            android:exported="false" >
-120-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\06cbf82235ff7888b1bd00b365b37ed7\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+120-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/rao/.gradle/caches/transforms-2/files-2.1/c769b1a3abedcf995c2267250ea92e24/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
 121            <meta-data
-121-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\06cbf82235ff7888b1bd00b365b37ed7\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+121-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/rao/.gradle/caches/transforms-2/files-2.1/c769b1a3abedcf995c2267250ea92e24/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
 122                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-122-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\06cbf82235ff7888b1bd00b365b37ed7\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+122-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/rao/.gradle/caches/transforms-2/files-2.1/c769b1a3abedcf995c2267250ea92e24/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
 123                android:value="cct" />
-123-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\06cbf82235ff7888b1bd00b365b37ed7\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+123-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/rao/.gradle/caches/transforms-2/files-2.1/c769b1a3abedcf995c2267250ea92e24/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
 124        </service>
 125        <service
-125-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\87ab190c9cd170b303c55045ac8519f5\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+125-->[com.google.android.datatransport:transport-runtime:2.2.6] /home/rao/.gradle/caches/transforms-2/files-2.1/6c62b13e1be73d1ff735cc59cf4350e9/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
 126            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-126-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\87ab190c9cd170b303c55045ac8519f5\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+126-->[com.google.android.datatransport:transport-runtime:2.2.6] /home/rao/.gradle/caches/transforms-2/files-2.1/6c62b13e1be73d1ff735cc59cf4350e9/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
 127            android:exported="false"
-127-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\87ab190c9cd170b303c55045ac8519f5\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+127-->[com.google.android.datatransport:transport-runtime:2.2.6] /home/rao/.gradle/caches/transforms-2/files-2.1/6c62b13e1be73d1ff735cc59cf4350e9/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
 128            android:permission="android.permission.BIND_JOB_SERVICE" >
-128-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\87ab190c9cd170b303c55045ac8519f5\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+128-->[com.google.android.datatransport:transport-runtime:2.2.6] /home/rao/.gradle/caches/transforms-2/files-2.1/6c62b13e1be73d1ff735cc59cf4350e9/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
 129        </service>
 130
 131        <receiver
-131-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\87ab190c9cd170b303c55045ac8519f5\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+131-->[com.google.android.datatransport:transport-runtime:2.2.6] /home/rao/.gradle/caches/transforms-2/files-2.1/6c62b13e1be73d1ff735cc59cf4350e9/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
 132            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-132-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\87ab190c9cd170b303c55045ac8519f5\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+132-->[com.google.android.datatransport:transport-runtime:2.2.6] /home/rao/.gradle/caches/transforms-2/files-2.1/6c62b13e1be73d1ff735cc59cf4350e9/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
 133            android:exported="false" />
-133-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\87ab190c9cd170b303c55045ac8519f5\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+133-->[com.google.android.datatransport:transport-runtime:2.2.6] /home/rao/.gradle/caches/transforms-2/files-2.1/6c62b13e1be73d1ff735cc59cf4350e9/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
 134
 135        <activity
-135-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2abbeba26caec9a294d93aee51d62a4a\jetified-play-services-auth-16.0.1\AndroidManifest.xml:23:9-27:75
+135-->[com.google.android.gms:play-services-auth:16.0.1] /home/rao/.gradle/caches/transforms-2/files-2.1/e100edfffac2d255a287705652d7cad0/jetified-play-services-auth-16.0.1/AndroidManifest.xml:23:9-27:75
 136            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-136-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2abbeba26caec9a294d93aee51d62a4a\jetified-play-services-auth-16.0.1\AndroidManifest.xml:24:13-93
+136-->[com.google.android.gms:play-services-auth:16.0.1] /home/rao/.gradle/caches/transforms-2/files-2.1/e100edfffac2d255a287705652d7cad0/jetified-play-services-auth-16.0.1/AndroidManifest.xml:24:13-93
 137            android:excludeFromRecents="true"
-137-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2abbeba26caec9a294d93aee51d62a4a\jetified-play-services-auth-16.0.1\AndroidManifest.xml:25:13-46
+137-->[com.google.android.gms:play-services-auth:16.0.1] /home/rao/.gradle/caches/transforms-2/files-2.1/e100edfffac2d255a287705652d7cad0/jetified-play-services-auth-16.0.1/AndroidManifest.xml:25:13-46
 138            android:exported="false"
-138-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2abbeba26caec9a294d93aee51d62a4a\jetified-play-services-auth-16.0.1\AndroidManifest.xml:26:13-37
+138-->[com.google.android.gms:play-services-auth:16.0.1] /home/rao/.gradle/caches/transforms-2/files-2.1/e100edfffac2d255a287705652d7cad0/jetified-play-services-auth-16.0.1/AndroidManifest.xml:26:13-37
 139            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-139-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2abbeba26caec9a294d93aee51d62a4a\jetified-play-services-auth-16.0.1\AndroidManifest.xml:27:13-72
+139-->[com.google.android.gms:play-services-auth:16.0.1] /home/rao/.gradle/caches/transforms-2/files-2.1/e100edfffac2d255a287705652d7cad0/jetified-play-services-auth-16.0.1/AndroidManifest.xml:27:13-72
 140        <!--
 141            Service handling Google Sign-In user revocation. For apps that do not integrate with
 142            Google Sign-In, this service will never be started.
 143        -->
 144        <service
-144-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2abbeba26caec9a294d93aee51d62a4a\jetified-play-services-auth-16.0.1\AndroidManifest.xml:33:9-36:110
+144-->[com.google.android.gms:play-services-auth:16.0.1] /home/rao/.gradle/caches/transforms-2/files-2.1/e100edfffac2d255a287705652d7cad0/jetified-play-services-auth-16.0.1/AndroidManifest.xml:33:9-36:110
 145            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-145-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2abbeba26caec9a294d93aee51d62a4a\jetified-play-services-auth-16.0.1\AndroidManifest.xml:34:13-89
+145-->[com.google.android.gms:play-services-auth:16.0.1] /home/rao/.gradle/caches/transforms-2/files-2.1/e100edfffac2d255a287705652d7cad0/jetified-play-services-auth-16.0.1/AndroidManifest.xml:34:13-89
 146            android:exported="true"
-146-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2abbeba26caec9a294d93aee51d62a4a\jetified-play-services-auth-16.0.1\AndroidManifest.xml:35:13-36
+146-->[com.google.android.gms:play-services-auth:16.0.1] /home/rao/.gradle/caches/transforms-2/files-2.1/e100edfffac2d255a287705652d7cad0/jetified-play-services-auth-16.0.1/AndroidManifest.xml:35:13-36
 147            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
-147-->[com.google.android.gms:play-services-auth:16.0.1] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\2abbeba26caec9a294d93aee51d62a4a\jetified-play-services-auth-16.0.1\AndroidManifest.xml:36:13-107
+147-->[com.google.android.gms:play-services-auth:16.0.1] /home/rao/.gradle/caches/transforms-2/files-2.1/e100edfffac2d255a287705652d7cad0/jetified-play-services-auth-16.0.1/AndroidManifest.xml:36:13-107
 148
 149        <activity
-149-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\7d64a1cd2514583b2a458dd887234110\jetified-play-services-base-17.6.0\AndroidManifest.xml:23:9-26:75
+149-->[com.google.android.gms:play-services-base:17.6.0] /home/rao/.gradle/caches/transforms-2/files-2.1/922ea0bf8ee19c8576b37da3bc10a817/jetified-play-services-base-17.6.0/AndroidManifest.xml:23:9-26:75
 150            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-150-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\7d64a1cd2514583b2a458dd887234110\jetified-play-services-base-17.6.0\AndroidManifest.xml:24:13-79
+150-->[com.google.android.gms:play-services-base:17.6.0] /home/rao/.gradle/caches/transforms-2/files-2.1/922ea0bf8ee19c8576b37da3bc10a817/jetified-play-services-base-17.6.0/AndroidManifest.xml:24:13-79
 151            android:exported="false"
-151-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\7d64a1cd2514583b2a458dd887234110\jetified-play-services-base-17.6.0\AndroidManifest.xml:25:13-37
+151-->[com.google.android.gms:play-services-base:17.6.0] /home/rao/.gradle/caches/transforms-2/files-2.1/922ea0bf8ee19c8576b37da3bc10a817/jetified-play-services-base-17.6.0/AndroidManifest.xml:25:13-37
 152            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-152-->[com.google.android.gms:play-services-base:17.6.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\7d64a1cd2514583b2a458dd887234110\jetified-play-services-base-17.6.0\AndroidManifest.xml:26:13-72
+152-->[com.google.android.gms:play-services-base:17.6.0] /home/rao/.gradle/caches/transforms-2/files-2.1/922ea0bf8ee19c8576b37da3bc10a817/jetified-play-services-base-17.6.0/AndroidManifest.xml:26:13-72
 153
 154        <meta-data
-154-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\b30aa8f2c38872540ef1352302c9199c\jetified-play-services-basement-17.6.0\AndroidManifest.xml:23:9-25:69
+154-->[com.google.android.gms:play-services-basement:17.6.0] /home/rao/.gradle/caches/transforms-2/files-2.1/a7dd160065f0b3988204d0d05b5b1c5a/jetified-play-services-basement-17.6.0/AndroidManifest.xml:23:9-25:69
 155            android:name="com.google.android.gms.version"
-155-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\b30aa8f2c38872540ef1352302c9199c\jetified-play-services-basement-17.6.0\AndroidManifest.xml:24:13-58
+155-->[com.google.android.gms:play-services-basement:17.6.0] /home/rao/.gradle/caches/transforms-2/files-2.1/a7dd160065f0b3988204d0d05b5b1c5a/jetified-play-services-basement-17.6.0/AndroidManifest.xml:24:13-58
 156            android:value="@integer/google_play_services_version" />
-156-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\b30aa8f2c38872540ef1352302c9199c\jetified-play-services-basement-17.6.0\AndroidManifest.xml:25:13-66
+156-->[com.google.android.gms:play-services-basement:17.6.0] /home/rao/.gradle/caches/transforms-2/files-2.1/a7dd160065f0b3988204d0d05b5b1c5a/jetified-play-services-basement-17.6.0/AndroidManifest.xml:25:13-66
 157    </application>
 158
 159</manifest>

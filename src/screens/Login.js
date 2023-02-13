@@ -47,7 +47,7 @@ function Login({ navigation }) {
   const checkLogin = async () => {
     let storedUser =  await AsyncStorage.getItem('token');
     if(storedUser) {
-      await AsyncStorage.setItem('isTeacher', JSON.stringify(true));
+      await AsyncStorage.setItem('isTeacher', JSON.stringify(false));
       let isTeacher = JSON.parse(await AsyncStorage.getItem('isTeacher'));
       isTeacher ? navigation.navigate('Attendance_fill_data') : navigation.navigate('Scan_Teacher_QR');
     }else{
@@ -61,12 +61,14 @@ function Login({ navigation }) {
       GoogleSignin.hasPlayServices().then((hasPlayService) => {
         if (hasPlayService) {
           GoogleSignin.signIn().then(async (userInfo) => {
-            let token = await GoogleSignin.getTokens()
+            let token = await GoogleSignin.getTokens();
+            let email = userInfo['user']['email'];
+            console.log("User information " + email);
             console.log("token in login", token);
             if (token.accessToken) {
               try {
                 await AsyncStorage.setItem('token', JSON.stringify(token.accessToken));
-                await AsyncStorage.setItem('isTeacher', JSON.stringify(true));
+                await AsyncStorage.setItem('isTeacher', JSON.stringify(false));
                 let isTeacher = JSON.parse(await AsyncStorage.getItem('isTeacher'));
                 // console.log("Is Teacher " + isTeacher);
                 isTeacher ? navigation.navigate('Attendance_fill_data') : navigation.navigate('Scan_Teacher_QR');

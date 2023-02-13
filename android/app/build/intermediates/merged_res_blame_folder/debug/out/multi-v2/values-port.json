@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\93e99cc524f9e4f775937ead40ad032e\\appcompat-1.2.0\\res\\values-port\\values-port.xml",
+                    "source": "/home/rao/.gradle/caches/transforms-2/files-2.1/062c584e7105f32bea72d749c12db8a1/appcompat-1.2.0/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

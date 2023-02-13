@@ -1,110 +1,114 @@
 [
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnativeelementdropdown_src_assets_close.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnativeelementdropdown_src_assets_close.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backiconmask.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/drawable-mdpi/node_modules_reactnavigationstack_lib_module_vendor_views_assets_backiconmask.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_mdndata_css_properties.json.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\raw\\node_modules_mdndata_css_properties.json"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/drawable-xhdpi/node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_csstree_data_patch.json.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\raw\\node_modules_csstree_data_patch.json"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/raw_node_modules_mdndata_css_properties.json.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/raw/node_modules_mdndata_css_properties.json"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_app.json.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\raw\\app.json"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnativeelementdropdown_src_assets_close.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/drawable-mdpi/node_modules_reactnativeelementdropdown_src_assets_close.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_reactnative_package.json.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\raw\\node_modules_reactnative_package.json"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backiconmask.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnavigationstack_lib_module_vendor_views_assets_backiconmask.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/drawable-hdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/drawable-hdpi/node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_mdndata_css_syntaxes.json.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\raw\\node_modules_mdndata_css_syntaxes.json"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnative_libraries_newappscreen_components_logo.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/drawable-mdpi/node_modules_reactnative_libraries_newappscreen_components_logo.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/drawable-mdpi/node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\drawable-hdpi\\node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/raw_node_modules_axios_package.json.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/raw/node_modules_axios_package.json"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnativeelementdropdown_src_assets_down.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnativeelementdropdown_src_assets_down.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnativeelementdropdown_src_assets_down.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/drawable-mdpi/node_modules_reactnativeelementdropdown_src_assets_down.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\drawable-xxhdpi\\node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_reactnativevectoricons_glyphmaps_antdesign.json.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\raw\\node_modules_reactnativevectoricons_glyphmaps_antdesign.json"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/raw_node_modules_mdndata_css_syntaxes.json.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/raw/node_modules_mdndata_css_syntaxes.json"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\drawable-mdpi\\node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_antdesign.json.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_antdesign.json"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_mdndata_css_atrules.json.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\raw\\node_modules_mdndata_css_atrules.json"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/drawable-xxhdpi/node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_axios_package.json.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\raw\\node_modules_axios_package.json"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnative_package.json.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/raw/node_modules_reactnative_package.json"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\drawable-xhdpi\\node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/drawable-xxxhdpi/node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/raw_node_modules_csstree_data_patch.json.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/raw/node_modules_csstree_data_patch.json"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_node_modules_csstree_package.json.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\raw\\node_modules_csstree_package.json"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/raw_app.json.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/raw/app.json"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png.flat",
-        "source": "H:\\RAO Projects\\REACT-NATIVE\\tnr_qr_attendance_application\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\node_modules_reactnavigationstack_lib_module_vendor_views_assets_backicon.png"
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/raw_node_modules_mdndata_css_atrules.json.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/raw/node_modules_mdndata_css_atrules.json"
+    },
+    {
+        "merged": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/build/intermediates/res/merged/debug/raw_node_modules_csstree_package.json.flat",
+        "source": "/home/rao/Desktop/RAO/tnr_qr_attendance_application/android/app/src/main/res/raw/node_modules_csstree_package.json"
     }
 ]

@@ -47,7 +47,7 @@ function Login({ navigation }) {
   const checkLogin = async () => {
     let storedUser =  await AsyncStorage.getItem('token');
     if(storedUser) {
-      await AsyncStorage.setItem('isTeacher', JSON.stringify(false));
+      await AsyncStorage.setItem('isTeacher', JSON.stringify(true));
       let isTeacher = JSON.parse(await AsyncStorage.getItem('isTeacher'));
       isTeacher ? navigation.navigate('Attendance_fill_data') : navigation.navigate('Scan_Teacher_QR');
     }else{
@@ -66,7 +66,7 @@ function Login({ navigation }) {
             if (token.accessToken) {
               try {
                 await AsyncStorage.setItem('token', JSON.stringify(token.accessToken));
-                await AsyncStorage.setItem('isTeacher', JSON.stringify(false));
+                await AsyncStorage.setItem('isTeacher', JSON.stringify(true));
                 let isTeacher = JSON.parse(await AsyncStorage.getItem('isTeacher'));
                 // console.log("Is Teacher " + isTeacher);
                 isTeacher ? navigation.navigate('Attendance_fill_data') : navigation.navigate('Scan_Teacher_QR');

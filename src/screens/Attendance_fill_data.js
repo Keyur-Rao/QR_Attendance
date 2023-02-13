@@ -169,12 +169,12 @@ function Attendance_fill_data({ navigation }) {
 
             // console.log("result !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  ", result.data.values);
             result.data.values.forEach(element => {
-                console.log("!!!!!!!!!!element!!!!!", element[0]);
-                fac_names_data.push({ "label": element[0], "value": element[0] })
-                sem_data.push({ "label": element[1], "value": element[1] })
-                div_data.push({ "label": element[2], "value": element[2] })
-                sub_data.push({ "label": element[4], "value": element[4] })
-                unit_data.push({ "label": element[5], "value": element[5] })
+                //if result data not undifined then push in array
+                element[0] !== "" ? fac_names_data.push({ "label": element[0], "value": element[0] }) : "";
+                element[1] !== "" ? sem_data.push({ "label": element[1], "value": element[1] }) : "";
+                element[2] !== "" ? div_data.push({ "label": element[2], "value": element[2] }) : "";
+                element[4] !== "" ? sub_data.push({ "label": element[4], "value": element[4] }) : "";
+                element[5] !== undefined ? unit_data.push({ "label": element[5], "value": element[5] }) : "";
                 // course_data.push({ "label": element[3], "value": element[3] })
                 temp_data.push(element[3])
                 course_sub_data.push({ "course": element[3], "subject": element[4] })

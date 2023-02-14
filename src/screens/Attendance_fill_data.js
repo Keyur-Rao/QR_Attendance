@@ -229,7 +229,7 @@ function Attendance_fill_data({ navigation }) {
     
     const generate_qr = () =>{
         let dateTime = new Date();
-
+        let dateTimeString = `${dateTime.getFullYear()}/${dateTime.getMonth()+1}/${dateTime.getDate()}, ${dateTime.getHours()}:${dateTime.getMinutes()}:${dateTime.getSeconds()}`;
         let dataObj = {
             faculty_Name: value6,
             sam_Name: value2,
@@ -237,7 +237,7 @@ function Attendance_fill_data({ navigation }) {
             subject_Name : value4,
             unit_Name : value5,
             course_Name : value,
-            timeStamp: dateTime.toLocaleString()
+            timeStamp: dateTimeString
         }
         // console.log(dataObj);
         let dataString = JSON.stringify(dataObj);
@@ -579,7 +579,7 @@ const styles = StyleSheet.create({
                 //Logo of in the center of QR Code 
                 logo={{
                     url:
-                    'https://media.licdn.com/dms/image/C5603AQG7mktpW1KPYg/profile-displayphoto-shrink_200_200/0/1656673510662?e=1680739200&v=beta&t=76YtL75ihlvczBcS8yXhhnhfQlnJdgP2gDGY5Jl3Tvg',
+                    'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K',
                 }}
                 //Center Logo size  
                 logoSize={30}

@@ -1,5 +1,5 @@
-com/rao/qr/attendance/MainActivity.java
- com.rao.qr.attendance.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
 com/rao/qr/attendance/BuildConfig.java
  com.rao.qr.attendance.BuildConfig
 com/rao/qr/attendance/MainApplication.java
@@ -10,5 +10,5 @@ com/rao/qr/attendance/ReactNativeFlipper.java
  com.rao.qr.attendance.ReactNativeFlipper$1
  com.rao.qr.attendance.ReactNativeFlipper$2
  com.rao.qr.attendance.ReactNativeFlipper$2$1
-com/facebook/react/PackageList.java
- com.facebook.react.PackageList
+com/rao/qr/attendance/MainActivity.java
+ com.rao.qr.attendance.MainActivity

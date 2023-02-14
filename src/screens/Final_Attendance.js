@@ -132,7 +132,7 @@ export default class CameraScreen extends React.Component {
 
   barcodeMethod = async (barcodes)=> {
     barcodes.forEach(barcode => {
-      if (! JSON.parse(barcode['data'])['faculty_Name']) {
+      if (! JSON.parse(barcode['data'])['faculty_Name'] ) {
           this.setState({ barcodeAllData: [...this.state.barcodeAllData, barcode["data"]] })
       }
     });
@@ -145,10 +145,29 @@ export default class CameraScreen extends React.Component {
     barcodes.forEach(barcode =>{
         // console.log(JSON.parse(JSON.stringify(barcode['data'])));
         if (JSON.parse(barcode['data'])['faculty_Name']) {
-          if (!this.state.teacherBarcodeData['faculty_Name']) {
+          let timeStamp = new Date(JSON.parse(barcode['data'])['timeStamp']);
+          let valid = timeStamp.setMinutes(timeStamp.getMinutes()+5) >  new Date().getTime();
+          console.log('valid ' + valid);
+          if (valid) {
+            if (!this.state.teacherBarcodeData['faculty_Name']) {
+              console.log('Valid teacher qr');
               this.setState({ teacherBarcodeData : JSON.parse(barcode['data']) });
               this.setState({ isScanTeacherQR: true});
+            }
+            else{
+              this.onInvalidBarCode(barcode);
+              console.log('Teacher QR code already scan!');
+            }
           }
+          else{
+            this.onInvalidBarCode(barcode);
+            console.log("Time Expire of QR code");
+          }
+          
+        }
+        else{
+          this.onInvalidBarCode(barcode);
+          console.log("Not teacher QR code");
         }
     });
   }
@@ -333,28 +352,34 @@ export default class CameraScreen extends React.Component {
           },
         ]}
       >
-        {/* <Text style={[styles.textBlock]}>{`${data} ${type}`}</Text> */}
+         <Text style={[styles.textBlock]}>{`${JSON.parse(data)['faculty_Name'] || JSON.parse(data)['Name']} `}</Text>
       </View>
     </React.Fragment>
   );
 
   showAlert = (message)=>{
-    return <TouchableOpacity style={{backgroundColor: 'grey', padding: 20, opacity: 0.7, bottom: 200, borderRadius: 50, marginHorizontal: 30}}>
+    return <View style={{backgroundColor: 'grey', padding: 20, opacity: 0.7, bottom: 180, borderRadius: 50, marginHorizontal: 30}}>
       <Text style={{textAlign: 'center', color: 'white', fontWeight: 'bold'}}>{message}</Text>
-    </TouchableOpacity>
+    </View>
   }
 
   showName = (name)=>{
     setTimeout(() => {
       this.setState({onDetect: { isDetect: false, detectedName: ""}});
     }, 5000);
-    return <Text style={{color: 'green', fontSize: 18, padding: 5, textAlign: 'center'}}> {name}  </Text>
+    return <Text style={{color: '#DC0000', fontSize: 18, padding: 5, textAlign: 'center', fontWeight: 'bold', backgroundColor: 'pink'}}> {name}  </Text>
   }
 
-  onBarCodeRead = async (barcode) => {
-    // console.log(barcode);
+  // onBarCodeRead = async (barcode) => {
+  //   console.log("~~~  Barcode ~~~~~~" + barcode);
+  //   const name = JSON.parse(barcode.data)['faculty_Name'] || JSON.parse(barcode.data)['Name'];
+  //   this.setState({ onDetect : {isDetect: true, detectedName: name} })
+  // }
+
+  onInvalidBarCode = async (barcode) => {
+    // console.log("~~~  Barcode ~~~~~~" + barcode);
     const name = JSON.parse(barcode.data)['faculty_Name'] || JSON.parse(barcode.data)['Name'];
-    this.setState({ onDetect : {isDetect: true, detectedName: name} })
+    this.setState({ onDetect : {isDetect: true, detectedName: "Not valid QR code"} })
   }
 
   renderCamera() {
@@ -393,7 +418,7 @@ export default class CameraScreen extends React.Component {
             ? RNCamera.Constants.FaceDetection.Classifications.all
             : undefined
         }
-        onBarCodeRead={this.onBarCodeRead}
+        // onBarCodeRead={this.onBarCodeRead}
         onFacesDetected={canDetectFaces ? this.facesDetected : null}
         onTextRecognized={canDetectText ? this.textRecognized : null}
         onGoogleVisionBarcodesDetected={canDetectBarcode ? this.barcodeRecognized : null}
@@ -505,7 +530,7 @@ export default class CameraScreen extends React.Component {
               this.setState({ canDetectBarcode: false }); 
               this.state.isTeacher ? navigation.navigate('Show_Barcode_Attendance', { "data": this.state.uniueBarcodeData, "teacherBarcodeData": {"faculty_Name": navigation.getParam('faculty_Name'), "sam_Name": navigation.getParam('sam_Name'), "div_Name" : navigation.getParam('div_Name'), "subject_Name" : navigation.getParam('subject_Name'), "unit_Name" : navigation.getParam('unit_Name'), "course_Name" : navigation.getParam('course_Name')}  }) : navigation.navigate('Show_Barcode_Attendance', { "data": this.state.uniueBarcodeData, "teacherBarcodeData": this.state.teacherBarcodeData }) }}
           >
-            <Text style={[styles.flipText, {color: "white"} ]}> END  </Text>
+            <Text style={[{color: "white", fontSize: 18} ]}> END  </Text>
 
           </TouchableOpacity>
 
@@ -569,7 +594,7 @@ const styles = StyleSheet.create({
   },
   flipButton: {
     flex: 0.3,
-    height: 40,
+    height: 43,
     marginHorizontal: 2,
     marginBottom: 10,
     marginTop: 10,
@@ -583,7 +608,7 @@ const styles = StyleSheet.create({
   },
   start_end_button: {
     color: 'white',
-    fontSize: 15,
+    fontSize: 18,
   },
 
   flipText: {
@@ -637,6 +662,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   textBlock: {
+    fontSize: 22,
     color: '#008000',
     position: 'absolute',
     textAlign: 'center',
@@ -646,8 +672,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#3C84AB',
     padding: 10,
     borderRadius: 10,
-    borderWidth: 2,
-    borderColor: "#3C84AB",
+    borderWidth: 1,
+    borderColor: "white",
     margin: 10
   }
 });

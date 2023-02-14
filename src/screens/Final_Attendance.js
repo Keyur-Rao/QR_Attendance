@@ -132,8 +132,12 @@ export default class CameraScreen extends React.Component {
 
   barcodeMethod = async (barcodes)=> {
     barcodes.forEach(barcode => {
-      if (! JSON.parse(barcode['data'])['faculty_Name'] ) {
+      if (JSON.parse(barcode['data'])['GrNo']) {
           this.setState({ barcodeAllData: [...this.state.barcodeAllData, barcode["data"]] })
+      }
+      else{
+        // this.onInvalidBarCode(barcode);
+        console.log('Not valid student!');
       }
     });
     // console.log("this.state.barcodeAllData:::::::::", [...new Set(this.state.barcodeAllData)]);
@@ -148,16 +152,10 @@ export default class CameraScreen extends React.Component {
           let timeStamp = new Date(JSON.parse(barcode['data'])['timeStamp']);
           let valid = timeStamp.setMinutes(timeStamp.getMinutes()+5) >  new Date().getTime();
           console.log('valid ' + valid);
-          if (valid) {
-            if (!this.state.teacherBarcodeData['faculty_Name']) {
+          if (valid && !this.state.teacherBarcodeData['faculty_Name']) {
               console.log('Valid teacher qr');
               this.setState({ teacherBarcodeData : JSON.parse(barcode['data']) });
               this.setState({ isScanTeacherQR: true});
-            }
-            else{
-              this.onInvalidBarCode(barcode);
-              console.log('Teacher QR code already scan!');
-            }
           }
           else{
             this.onInvalidBarCode(barcode);
@@ -352,11 +350,11 @@ export default class CameraScreen extends React.Component {
           },
         ]}
       >
-         <Text style={[styles.textBlock]}>{`${JSON.parse(data)['faculty_Name'] || JSON.parse(data)['Name']} `}</Text>
+      {JSON.parse(data)['faculty_Name'] || JSON.parse(data)['Name'] ? <Text style={[styles.textBlock]}>{`${JSON.parse(data)['faculty_Name'] || JSON.parse(data)['Name']} `}</Text> : <Text style={[styles.textBlock, {color: '#DC0000'}]}>Not valid QR</Text> }
       </View>
     </React.Fragment>
   );
-
+  5000
   showAlert = (message)=>{
     return <View style={{backgroundColor: 'grey', padding: 20, opacity: 0.7, bottom: 180, borderRadius: 50, marginHorizontal: 30}}>
       <Text style={{textAlign: 'center', color: 'white', fontWeight: 'bold'}}>{message}</Text>
@@ -366,7 +364,7 @@ export default class CameraScreen extends React.Component {
   showName = (name)=>{
     setTimeout(() => {
       this.setState({onDetect: { isDetect: false, detectedName: ""}});
-    }, 5000);
+    }, 3000);
     return <Text style={{color: '#DC0000', fontSize: 18, padding: 5, textAlign: 'center', fontWeight: 'bold', backgroundColor: 'pink'}}> {name}  </Text>
   }
 
@@ -377,8 +375,8 @@ export default class CameraScreen extends React.Component {
   // }
 
   onInvalidBarCode = async (barcode) => {
-    // console.log("~~~  Barcode ~~~~~~" + barcode);
-    const name = JSON.parse(barcode.data)['faculty_Name'] || JSON.parse(barcode.data)['Name'];
+    // // console.log("~~~  Barcode ~~~~~~" + barcode);
+    // const name = JSON.parse(barcode.data)['faculty_Name'] || JSON.parse(barcode.data)['Name'];
     this.setState({ onDetect : {isDetect: true, detectedName: "Not valid QR code"} })
   }
 
